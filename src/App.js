@@ -14,7 +14,6 @@ class App extends Component {
         let _this = this;
         await axios.get('https://inventory-react.herokuapp.com/api/units')
             .then(function (response) {
-                console.log(response);
                 _this.setState({units: response.data});
             })
             .catch(function (error) {

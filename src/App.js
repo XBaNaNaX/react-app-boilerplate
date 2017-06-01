@@ -12,7 +12,7 @@ class App extends Component {
 
     async loadUnit() {
         let _this = this;
-        await axios.get('/api/units')
+        await axios.get('https://inventory-react.herokuapp.com/api/units')
             .then(function (response) {
                 console.log(response);
                 _this.setState({units: response.data});
@@ -50,7 +50,7 @@ class App extends Component {
                     }}/>
                     <button onClick={(e)=>{
                         e.preventDefault()
-                        axios.post('/api/units', {
+                        axios.post('https://inventory-react.herokuapp.com/api/units', {
                             name: document.getElementById("txt1").value
                         })
                             .then(function (response) {

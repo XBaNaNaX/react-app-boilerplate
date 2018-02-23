@@ -24,17 +24,8 @@ router.route('/delete_units')
         if (err)
             res.send(err);
 
-        res.json({ message: 'Successfully deleted', unit: unit });
-    })
-    .get(function (req, res) {
-        Unit.remove({
-            _id: req.params.unit_id
-        }, function(err, unit) {
-        if (err)
-            res.send(err);
-
         res.json({ message: 'Successfully deleted' });
-    });
+    })
 });
 
 router.route('/units')

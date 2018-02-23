@@ -74,7 +74,15 @@ class App extends Component {
                 {
                     units !== null ?
                         units.map((unit, index) => {
-                            return <div key={index}><h3>{unit._id}:{unit.name}</h3></div>
+                            return <div key={index}><h3>{unit._id}:{unit.name}</h3>
+                            <button data-unitid={unit._id} onClick={(e)=>{
+                                e.preventDefault()
+                                const unit_id = e.target.attributes.getNamedItem('data-unitid').value
+                                axios.delete('https://inventory-react.herokuapp.com/api/units',{
+                                    unit_id: unit_id
+                                });
+                            }} style={{color:'red'}}>&#10006;</button>
+                            </div>
                         })
                     : <h1>Loading...</h1>
                 }

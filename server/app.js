@@ -15,6 +15,18 @@ var router = express.Router();
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://admin:1q2w3e4r@ds161121.mlab.com:61121/inventory');
 var Unit = require('../model/units');
+
+router.route('/delete_units').post(function (req, res) {
+    Unit.remove({
+        _id: req.params.unit_id
+    }, function(err, unit) {
+        if (err)
+            res.send(err);
+
+        res.json({ message: 'Successfully deleted' });
+    });
+});
+
 router.route('/units')
 
 // create a unit (accessed at POST http://localhost:8080/api/units)

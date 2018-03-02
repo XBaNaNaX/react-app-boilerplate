@@ -16,16 +16,12 @@ var mongoose = require('mongoose');
 mongoose.connect('mongodb://admin:1q2w3e4r@ds161121.mlab.com:61121/inventory');
 var Unit = require('../model/units');
 
-router.route('/delete_units')
-    .post(function (req, res) {
-        Unit.remove({
-            _id: req.params.unit_id
-        }, function(err, unit) {
-        if (err)
-            res.send(err);
-
-        res.json({ message: 'Successfully deleted' });
-    })
+app.use(function(req, res, next) {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Credentials", "true");
+    res.setHeader("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
+    res.setHeader("Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers");
+    next();
 });
 
 router.route('/units')
@@ -46,7 +42,7 @@ router.route('/units')
 
     })
     .get(function (req, res) {
-        Unit.find(function (err, units) {
+        Unit.find({},function (err, units) {
             if (err)
                 res.send(err);
 
@@ -58,7 +54,7 @@ router.route('/units')
 
     // get the unit with that id (accessed at GET http://localhost:8080/api/units/:unit_id)
     .get(function(req, res) {
-        Unit.findById(req.params.unit_id, function(err, unit) {
+        Unit.findById(req.params.unit_id, function(err, unit) {            
             if (err)
                 res.send(err);
             res.json(unit);
@@ -83,7 +79,8 @@ router.route('/units')
             });
 
         });
-    }).delete(function(req, res) {
+    })
+    .delete(function(req, res) {
         Unit.remove({
             _id: req.params.unit_id
         }, function(err, unit) {
@@ -94,20 +91,9 @@ router.route('/units')
         });
     });
 
-router.use(function (req, res, next) {
-    // do logging
-    console.log('Something is happening.');
-    next(); // make sure we go to the next routes and don't stop here
-});
-router.get('/', function (req, res) {
-    res.json({message: 'hooray! welcome to our api!'});
-});
-app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
-});
+
 app.use('/api', router);
+
 // Serve static assets
 app.use(express.static(path.resolve(__dirname, '..', 'build')));
 app.use(favicon(path.join(__dirname, '..', 'public', 'favicon.ico')));

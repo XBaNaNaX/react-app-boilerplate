@@ -88,7 +88,6 @@ router.route('/units')
                 res.send(err);
 
             res.json({ message: 'Successfully deleted' });
-            res.redirect('/');
         });
     });
 

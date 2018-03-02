@@ -78,7 +78,10 @@ class App extends Component {
                             <button data-unitid={unit._id} onClick={(e)=>{
                                 e.preventDefault()
                                 const unit_id = e.target.attributes.getNamedItem('data-unitid').value
-                                axios.delete('https://inventory-react.herokuapp.com/api/units/' +unit_id);
+                                axios.delete('https://inventory-react.herokuapp.com/api/units/' +unit_id).then(function(response){
+                                    console.log(response);
+                                    _this.loadUnit();
+                                });
                             }} style={{color:'red'}}>&#10006;</button>
                             </h3>
                             </div>

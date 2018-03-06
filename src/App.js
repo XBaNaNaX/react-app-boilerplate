@@ -2,7 +2,10 @@ import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import axios from 'axios';
-import TextBox from './Components/Controls/TextBox';
+import TextBox from './components/Controls/TextBox';
+
+import { connect } from 'react-redux';
+import { fetchData } from './actions';
 
 class App extends Component {
     constructor(props) {
@@ -28,6 +31,7 @@ class App extends Component {
     render() {
         let {units} = this.state;
         let _this = this;
+        let props = this.props;
         return (
             <div className="App">
                 <div className="App-header">
@@ -37,6 +41,26 @@ class App extends Component {
                 <p className="App-intro">
                     To get started, edit <code>src/App.js</code> and save to reload.
                 </p>
+
+                <div>
+                    <p>Redux Example</p>
+                    <button onClick={()=>{props.fetchData()}}>Load data</button>
+                    {
+                        props.appData.isFetching && <p>Loading</p>
+                    }
+
+                    {
+                        props.appData.data.length ? (
+                            props.appData.data.map((person, i) => {
+                              return <div key={i} >
+                                <p>Name: {person.name}</p>
+                                <p>Age: {person.age}</p>
+                              </div>
+                            })
+                          ) : null
+                    }
+                </div>
+
                 <div style={{
                     display: 'flex',
                     flex: 1,
@@ -92,6 +116,19 @@ class App extends Component {
             </div>
         );
     }
+
+    
 }
 
-export default App;
+function mapStateToProps (state) {
+    return {
+        appData: state.appData
+    }
+}
+function mapDispatchToProps (dispatch) {
+    return {
+        fetchData: () => dispatch(fetchData())
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

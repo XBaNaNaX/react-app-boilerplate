@@ -12,7 +12,14 @@
     "node-sass": "^4.5.3",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
+    "react-redux": "^5.0.7",
     "react-router-dom": "^4.1.1",
+    "redux": "^3.7.2",
+    "redux-observable": "^0.18.0",
+    "redux-promise-middleware": "^5.0.0",
+    "redux-saga": "^0.16.0",
+    "redux-thunk": "^2.2.0",
+    "rxjs": "^5.5.6",
     "serve-favicon": "^2.4.3"
   },
   "devDependencies": {

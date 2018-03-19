@@ -59,6 +59,17 @@ class App extends Component {
                             })
                           ) : null
                     }
+
+                    {
+                        props.appData.unit.length ? (
+                            props.appData.unit.map((unit, i) => {
+                              return <div key={i} >
+                                <p>Name: {unit.name}</p>
+                                <p>Order: {unit.order}</p>
+                              </div>
+                            })
+                          ) : null
+                    }
                 </div>
 
                 <div style={{

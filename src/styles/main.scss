@@ -1,0 +1,41 @@
+/* CSS declarations go here */
+@import "../stylesheets/variable";
+.block-red{
+	outline: 1px solid red;
+}
+
+.block-green{
+	outline: 1px solid green;
+}
+
+.display-block {
+	display: block;
+}
+
+.display-inline-block {
+	display: inline-block;
+}
+
+.color-red {
+	color: #FF0000;
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+.home{
+	.left-box{
+		.disabled {
+			.home-side-bar-menu{
+				.primary-text,.tertiary-text{
+					color: #666;
+				}
+				filter: grayscale(100%);
+				-webkit-filter: grayscale(100%);
+				opacity: 1 !important;
+			}
+		}
+	}
+}

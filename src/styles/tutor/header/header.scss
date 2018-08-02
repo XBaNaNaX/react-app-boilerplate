@@ -1,0 +1,367 @@
+@import '../../../stylesheets/variable';
+
+.logo-img{
+	//background: #fff;
+}
+.navbar{
+	position: fixed;
+	width: 100%;
+	z-index: 200;
+	.nav-back{
+		float: left;
+		margin-left: 0px;
+		margin-right: 16px;
+		@media screen and (min-width: 768px) {
+			margin-top: 4px;
+		}
+		@media screen and (max-width: 767px) {
+			margin-top: 8px;
+		}
+		i{
+			color: #fff !important;
+		}
+	}
+}
+.login-bar {
+	.nav-wrapper {
+		text-align: left;
+
+		.logo-text{
+			color: #000 !important;
+		}
+	}
+}
+.edit-question-navbar{
+	@media screen and (max-width: 767px) {
+		padding-left: 10px !important;
+	}
+	.summary-text{
+		font-size: 16px;
+		line-height: 30px;
+		margin-top: 10px;
+		@media screen and (max-width: 767px){
+			//margin-top: 5px !important;
+			font-size: 12px;
+			line-height: 15px;
+		} 
+	}
+	.menu-btn{
+		border: none;
+		color: #47A8BF;
+		background: transparent;
+		margin-top: 8px;
+		margin-left: 20px;
+		cursor: pointer;
+		&:focus{
+			outline: none;
+		}
+		i{
+			float:left;
+		}
+		.text{
+			float: left;
+			margin-left: 5px;
+			line-height: 24px;
+		}
+		@media screen and (max-width: 767px) {
+			margin-left: 8px !important;
+		}
+	}
+	.more-btn{
+		border: none;
+		color: #ccc !important;
+		background: transparent;
+		margin-top: 12px;
+		cursor: pointer;
+		margin-left: 20px;
+		@media screen and (max-width: 767px) {
+			margin-left: 8px !important;
+		}
+	}
+}
+.navBarMenu{
+
+	display: block !important;
+	box-shadow: none !important;
+	@media (max-width: 767px){
+		padding: 0px !important;
+	}
+	.left-icon{
+		margin-left: 13px;
+		margin-right: 11px;
+		i{
+			cursor: pointer;
+			color: #fff !important;
+			margin-top: 12px;
+			@media screen and (max-width: 767px){
+				color: #27859b !important;
+			}
+		}
+	}
+	.navBarMenuChild{
+		//display: block !important;
+		width: 99% !important;
+	}
+	.sigin-up{
+		display: none;
+		color: #fff;
+	    font-size: 16px;
+	    width: 65px;
+	    margin-top: 14px;
+	    float: left;
+	    @media screen and (max-width: 767px){
+	    	display: inline-block;
+	    }
+	}
+	.headerRight{
+		margin: 0px !important;
+		.avatar-profile{
+			.material-icons{
+				font-size: 37px !important;
+			    margin: 0px !important;
+			    width: auto !important;
+			    height: auto !important;
+			}
+		}
+		.active{
+			button{
+				background: #27859b !important;
+			}
+		}
+		button{
+			height: 64px !important;
+			width: 55px !important;
+		    text-align: center;
+		    padding: 0px !important;
+		    cursor: pointer;
+		    float: left;
+
+		    @media screen and (min-width: 1200px) {
+		    	&:hover,&.active{
+			    	background: #27859b !important;
+			    }
+		    }
+			.material-icons{
+				font-size: 28px !important;
+			}
+		}
+	}
+
+	.menu-btn{
+		height: 64px !important;
+	    border-radius: 0px !important;
+	    color: #fff !important;
+	    text-transform: none !important;
+	    background: none;
+	    border: none;
+	    line-height: 24px;
+	    padding-left:20px;
+	    padding-right: 20px;
+	    cursor: pointer;
+	    float: left;
+	    i{
+	    	float: left;
+	    	@media screen and (max-width: 767px){
+	    		font-size: 22px !important;
+	    	}
+	    }
+		span{
+			text-transform: none !important;
+			font-weight: normal !important;
+			margin-left: 10px;
+		}
+		&:hover,&:focus{
+			background: #27859b !important;
+			outline: none !important;
+		}
+		@media screen and (max-width: 767px){
+			height: 50px !important;
+			font-size: 12px;
+			&:hover{
+				background: none !important;
+			}
+		}
+	}
+	.right-menu{
+		float: right;
+		margin-right: 16px;
+		@media screen and (max-width: 767px){
+			margin-right: 0px !important;
+		}
+	}
+	.more-btn{
+		float: right;
+		text-align: right;
+		background: none;
+		border: none;
+		height: 64px;
+		cursor: pointer;
+		margin-left: 20px;
+		&:hover,&:focus{
+			outline: none !important;
+		}
+		@media screen and (max-width: 767px){
+			height: 50px !important;
+			margin-top: -5px !important;
+			margin-left: 20px;
+			font-size: 12px;
+			&:hover{
+				background: none !important;
+			}
+		}
+	}
+}
+.sidebar{
+	position: fixed;
+	z-index: 2000;
+	.menu-left{
+		color: #ccc !important;
+		.material-icons{
+			color: #ccc !important;
+		}
+		&.active{
+			color: rgb(71, 168, 191) !important;
+			background: #ebebeb !important;
+			.material-icons{
+				color: #000 !important;
+			}
+		}
+	}
+	
+}
+.signin-part{
+	color: #999;
+	float: left;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    i{
+    	margin-right: 5px;
+    	float: left;
+    }
+
+    span {
+    	float: left;
+    	vertical-align: middle;
+    	margin-top: 4px;
+    }
+
+}
+.logo-text{
+	color: #fff;
+	margin-left: 8px;
+}
+.signin-bar{
+	float: left;
+	cursor: pointer;
+	li{
+		margin-left: 10px;
+	}
+}
+.flag{
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	border: 1px solid #ebebeb;
+	float: left;
+	cursor: pointer;
+	margin-top: 4px;
+
+	&.eng {
+		background: url(/img/lang/eng.png) center center no-repeat;
+		background-size: 38px;
+	}
+	
+	&.thai {
+		background: url(/img/lang/thai.png) center center no-repeat;
+		background-size: 38px;
+	}
+}
+@media screen and (max-width: 767px){
+	.s-paddingtop20{
+		margin-top: 20px;
+	}
+	.nav-wrapper{
+		float: left;
+		width: 100%;
+	}
+	.navBarMenu{
+		padding: 0 0.75rem !important;
+		.sign-up{
+			display: block;
+		}
+		.navBarMenuChild{
+			width: 97% !important;
+			text-align: center !important;
+			height: 50px !important;
+			.logo-text{
+				margin-top: 15px;
+				color: #fff !important;
+			    //display: block;
+			    line-height: 18px;
+			}
+			button{
+				margin: 0px 0px 2px -16px !important;
+			}
+			div{
+				margin: 3px 12px 0px 0px !important;
+				height: 50px !important;
+				line-height: 40px !important;
+			}
+			.left-icon{
+				margin-top: 11px !important;
+				margin-left: 0px !important;
+			}
+			.right-menu{
+				margin:0px -28px 0px 0px !important
+			}
+		}
+	}
+	.navBarMenu,.navBarMenuChild{
+		height: 54px !important;
+		img{
+			width: 35px !important;
+			margin-top: 7px !important;
+		}
+	}
+
+	.login-bar {
+		width: 100% !important;
+			.nav-wrapper {
+			text-align: left;
+
+			.logo-text{
+				color: #000 !important;
+			}
+		}
+	}
+}
+.navBarMenu .navBarMenuChild{
+	&.login-bar {
+		width: 100% !important;
+		div {
+			margin-right: 0px !important;
+		}
+	}
+}
+
+
+.searchClass{
+	//width: 256px !important;
+	input[type='search']{
+		width: 256px !important;
+		color: #fff !important;
+	}
+	@media #{$medium-and-down} {
+		input[type='search']{
+			width: 180px !important;
+		}
+	}
+}
+
+.logo-text-left{
+	@media screen and (max-width: 767px) {
+		top: 5px;
+	}
+}

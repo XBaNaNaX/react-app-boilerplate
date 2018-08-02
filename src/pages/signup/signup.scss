@@ -1,0 +1,183 @@
+@import '../../styles/variable';
+
+$bg: '../../styles/img/create_account_bg.png';
+$studentAvatar: '../../styles/img/student.png';
+$tutorAvatar: '../../styles/img/tutor.png';
+
+.SignUp {
+  background-image: url($bg);
+  background-size: cover;
+  height: calc(100vh - 64px);
+
+  @media screen and (min-width: 1200px) {
+  }
+  @media screen and (max-width: 1199px) and (min-width: 768px) {
+  }
+  @media screen and (max-width: 767px) {
+    height: calc(100vh - 54px);
+  }
+
+  .sign-up-wrapper {
+    display: flex;
+    position: relative;
+    height: 100%;
+
+    @media screen and (max-width: 1199px) and (min-width: 768px) {
+      flex-direction: column;
+    }
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+    }
+    .student-block {
+      text-align: center;
+      background-color: rgba(244, 121, 32, 0.6);
+      width: 50%;
+      @media screen and (min-width: 1200px) {
+        flex: 1;
+        align-items: stretch;
+      }
+      @media screen and (max-width: 1199px) and (min-width: 768px) {
+        flex: 1;
+        align-items: stretch;
+        width: 100%;
+        height: 50%;
+      }
+      @media screen and (max-width: 767px) {
+        width: 100%;
+        height: 50%;
+      }
+    }
+
+    .tutor-block {
+      text-align: center;
+      background-color: rgba(250, 250, 250, 0.6);
+      width: 50%;
+
+      @media screen and (min-width: 1200px) {
+        flex: 1;
+        align-items: stretch;
+      }
+      @media screen and (max-width: 1199px) and (min-width: 768px) {
+        flex: 1;
+        align-items: stretch;
+        width: 100%;
+        height: 50%;
+      }
+      @media screen and (max-width: 767px) {
+        width: 100%;
+        height: 50%;
+      }
+    }
+  }
+
+  .student-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .student-avatar {
+      background-image: url($studentAvatar);
+      background-size: 200px;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 200px;
+      margin-top: 10em;
+      margin-bottom: 2em;
+      @media screen and (max-width: 1199px) and (min-width: 768px) {
+        margin-top: 30px;
+      }
+      @media screen and (max-width: 767px) {
+        margin-bottom: 15px;
+        margin-top: 20px;
+        background-size: 100px;
+        height: 100px;
+      }
+    }
+    .student-text {
+      font-size: 36px;
+      margin-bottom: 15px;
+      color: #ffffff;
+      @media screen and (max-width: 767px) {
+        font-size: 20px;
+      }
+    }
+    .btn-wrapper {
+      .btn-sign-up-student {
+        cursor: pointer;
+        height: 50px;
+        width: 300px;
+        outline: none;
+        color: #fff;
+        border: 1px solid #fff;
+        background-color: rgba(250, 250, 250, 0.2);
+        transition: 100ms;
+        @media screen and (max-width: 767px) {
+          width: 240px;
+          height: 42px;
+        }
+        span {
+          font-size: 18px;
+          @media screen and (max-width: 767px) {
+            font-size: 16px;
+          }
+        }
+        &:hover {
+          @include material-box-shadow(1);
+        }
+      }
+    }
+  }
+  .tutor-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .tutor-avatar {
+      background-image: url($tutorAvatar);
+      background-size: 200px;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 200px;
+      margin-top: 10em;
+      margin-bottom: 2em;
+      @media screen and (max-width: 1199px) and (min-width: 768px) {
+        margin-top: 30px;
+      }
+      @media screen and (max-width: 767px) {
+        margin-bottom: 15px;
+        margin-top: 20px;
+        background-size: 100px;
+        height: 100px;
+      }
+    }
+    .tutor-text {
+      font-size: 36px;
+      margin-bottom: 15px;
+      @media screen and (max-width: 767px) {
+        font-size: 20px;
+      }
+    }
+    .btn-wrapper {
+      .btn-sign-up-tutor {
+        cursor: pointer;
+        height: 50px;
+        width: 300px;
+        outline: none;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        transition: 100ms;
+        @media screen and (max-width: 767px) {
+          width: 240px;
+          height: 42px;
+        }
+        span {
+          font-size: 18px;
+          @media screen and (max-width: 767px) {
+            font-size: 16px;
+          }
+        }
+        &:hover {
+          @include material-box-shadow(1);
+        }
+      }
+    }
+  }
+}

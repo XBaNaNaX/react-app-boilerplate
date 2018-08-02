@@ -1,0 +1,145 @@
+@import '../../../stylesheets/variable';
+
+.offer-card-content {
+    cursor: pointer;
+    position: relative;
+    height: 210px;
+    margin-bottom: 12px;
+    margin-top: 12px;
+    @media screen and (max-width: 767px) {
+        height: 190px !important;
+        margin-bottom: 6px !important;
+        margin-top: 6px !important;
+    }
+    .offer-card-grid-block {
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 6px;
+        //height: 100%;
+        cursor: pointer;
+        border: 1px solid rgba(204, 204, 204, 0.64);
+        -webkit-box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px !important;
+        -moz-box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px !important;
+        box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px !important;
+        .offer-card-grid-title-text {
+            font-weight: $font-bold;
+            font-size: 18px;
+            color: #000;
+            margin-bottom: 5px;
+            white-space: nowrap;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .offer-card-grid-sub-title-text {
+            font-weight: $font-bold;
+            font-size: 16px;
+            margin-bottom: 5px;
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .offer-card-grid-taken-text {
+            font-size: 12px;
+            color: #AAA;
+            margin-bottom: 10px;
+        }
+    }
+    
+}
+
+.offer-detail-sidebar{
+    /*margin-left: auto !important;
+    margin-right: auto !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;*/
+    line-height: 24px;
+    .offer-div{
+        width: 100%;
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .side-bar-title {
+        font-weight: $font-bold;
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+    .side-bar-offer-detail{
+        margin-bottom: 20px;
+    }
+    .side-bar-prospect-detail{
+
+    }
+}
+
+.offer-detail-content {
+    .exam-block{
+        .upper-block{
+            @media screen and (min-width: 1200px) {
+                height: 145px !important;
+            }
+        }
+    }
+    .btn-filter {
+        @media screen and (max-width: 767px) {
+            margin-right: 4px !important;
+        }
+    }
+    .content-part {
+        @media screen and (max-width: 767px) {
+            //padding-bottom: 0 !important;
+        }
+    }
+}
+
+.title-icon {
+    padding: 3px 2px;
+    position: relative;
+    margin-top: -8px;
+    top: 4px;
+}
+
+.offer-detail-content {
+    .content-part {
+        padding-bottom: 12px !important;
+    }
+    .banner-block {
+        padding: 0 !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .student-name {
+            font-size: 22px;
+            margin: 0 !important;
+        }
+    }
+    .student-detail {
+        font-size: 12px;
+        .student-image {
+            width: 64px;
+            height: 64px;
+            background-size: contain;
+            float: left;
+            background-repeat: no-repeat;
+            margin-right: 12px;
+            margin-top: 5px;
+            margin-bottom: 8px;
+            border: 1px solid rgba(204, 204, 204, 0.71);
+        }
+        .text-bold {
+            font-weight: $font-bold;
+        }
+    }
+    .student-detail-offer {
+        margin-top: 12px;
+        margin-bottom: 15px;
+        .display-block {
+            height: 18px;
+        }
+    }
+}

@@ -1,0 +1,49 @@
+.overview-chart{
+    @media screen and (max-width: 767px) {
+        .col {
+            padding-left: 6px !important;
+            padding-right: 6px !important;
+        }
+    }
+}
+.overview-block {
+    cursor: pointer;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    line-height: 27px;
+    padding: 0.75rem;
+    padding-bottom: 0px !important;
+
+    .title-wrapper{
+        font-weight: bold;
+    }
+    .total-wrapper{
+        font-weight: bold;
+        font-size: 30px;
+        position: relative;
+        top: 5px;
+    }
+    .subtitle-wrapper{
+        font-size: 13px;
+        padding-top: 10px;
+        i{
+            position: relative;
+            top: 8px;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        margin-bottom: 10px !important;
+        .subtitle-wrapper{
+            font-size: 10px !important;
+        }
+    }
+}
+.overview-block.active {
+    box-shadow: 0px 4px 5px 2px #bbb;
+}
+.hint{
+    width: 100%;
+    text-align: center;
+    color: #999;
+}

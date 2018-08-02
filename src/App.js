@@ -9,6 +9,8 @@ import LandingPage from './components/Landing';
 import HomePage from './components/Home';
 import * as routes from './constants/routes';
 
+import {SignUp} from './pages/signup';
+
 class App extends Component {
 
     render() {
@@ -24,6 +26,10 @@ class App extends Component {
                 <Route
                     exact path={routes.HOME}
                     component={() => <HomePage />}
+                />
+                <Route 
+                    exact path={routes.SIGN_UP}
+                    component={()=> <SignUp />}
                 />
                 </div>
             </Router>

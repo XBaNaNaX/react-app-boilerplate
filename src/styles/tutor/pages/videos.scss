@@ -1,0 +1,126 @@
+@import '../_common/asset-commons';
+@import '../../../stylesheets/variable';
+
+.left-panel{
+  @extend .left-panel-detail;
+
+  .upload-block{
+   @extend .upload-block;
+
+    .image-icon{
+      @extend .image-icon;
+    }
+    .image-label{
+      @extend .image-label;
+    }
+  }
+  .upload-show-name{
+    
+    @extend .upload-block;
+    padding-top: 75px !important;
+    @media screen and (max-width: 767px){
+      padding-top: 85px !important;
+    }
+    .image-label{
+      @extend .image-label;
+    }
+  }
+}
+.play-button{
+      position: absolute;
+      top: calc(50% - 40px);
+      left: calc(50% - 40px);
+      width: 80px;
+      height: 80px;
+      border: 2px solid #ebebeb;
+      color: #ebebeb;
+      border-radius: 50px;
+      text-align: center;
+      i{
+        font-size: 70px;
+        vertical-align: middle;
+        margin-top: 5px;
+        display: block;
+      }
+      &:hover{
+        @include button-shadow1();
+      }
+}
+.checkbox-video-free{
+  @extend .checkbox-free;
+}
+.video-create-thumbnail{
+  @extend .left-panel-thumbnail;
+}
+.video-banner-block{
+  @extend .edit-banner-block;
+
+  .video-banner-wrapper{
+    @extend .edit-banner-wrapper;
+
+    .video-banner-icon{
+      @extend .edit-banner-icon;
+    }
+    .video-banner-label{
+      @extend .edit-banner-label;
+    }
+  }
+}
+
+.view-video-wrapper {
+  .view-video-header{
+    display: block;
+    .title {
+      display: inline-block;
+      float: left;
+    }
+    .icon-close {
+      display: inline-block;
+      float: right;
+      position: relative;
+      bottom: 3px;
+      cursor: pointer;
+    }
+  }
+  .view-video-content {
+    display: block;
+    height: 360px;
+    .player-video {
+      margin-top: 10px;
+    }
+    .loading-view{
+
+    }
+  }
+}
+
+.remove-file-upload {
+  cursor: pointer;
+  position: relative;
+  color: #ccc;
+  font-size: 12px;
+  top: 8px;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    color: #aaa;
+  }
+}
+
+.remove-paste-url {
+  cursor: pointer;
+  position: absolute;
+  font-size: 16px;
+  color: #CCCCCC;
+  bottom: 12px;
+  right: 0;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    color: #aaa;
+  }
+}
+
+.txt-field {
+  input {
+    width: 94% !important;
+  }
+}

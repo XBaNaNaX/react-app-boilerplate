@@ -1,0 +1,133 @@
+@import '../../../stylesheets/variable';
+
+.OfferMoreSelectCategory {
+  @include add-fade-in();
+  .category-block {
+    margin-right: auto;
+    padding: 12px !important;
+    .category-column {
+      padding: 12px !important;
+      .category-block-square {
+        cursor: pointer;
+        padding: 12px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        border: 1px solid #cccccc;
+        background-color: #ebebeb;
+        color: #cccccc;
+        position: relative;
+
+        @media screen and (min-width: 1200px) {
+          height:164px;
+        }
+        
+        @media screen and (max-width: 1199px) and (min-width: 768px) {
+          height:148px;
+        }
+
+        &.has-asset {
+          border: 1px solid #47A8BF;
+          background-color: #ffffff;
+          color: #47A8BF;
+          &.pick {
+            border: 1px solid #47A8BF;
+            background-color: #47A8BF;
+            color: #ffffff;
+          }
+        }
+        .col {
+          padding: 0;
+        }
+        .pick-icon {
+          display: none;
+          position: absolute;
+
+          @media screen and (min-width: 768px) {
+            right: 8px;
+            top: 8px;
+          }
+
+          @media screen and (max-width: 767px) {
+            right: 4px;
+            top: 4px;
+          }
+
+          &.pick {
+           display: block;
+          }
+        }
+        .label-category {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          font-weight: 300;
+          width: 100%;
+          left: 0;
+          font-weight: 300 !important;
+          cursor: pointer;
+
+          @media screen and (min-width: 768px) {
+            font-size: 28px;
+            line-height: 40px;
+          }
+
+          @media screen and (max-width: 767px) {
+            font-size: 19px;
+            line-height: 30px;
+          }
+
+          &.has-asset {
+            color: #47A8BF;
+            &.pick {
+              color: #ffffff;
+            }
+          }
+          .pick-category {
+            display: none;
+          }
+        }
+        .no-asset-text {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 0px;
+          font-size: 12px;
+          color: #cccccc;
+          &.has-asset {
+            color: #47A8BF;
+            &.pick {
+              color: #ffffff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .OfferMoreSelectCategory {
+
+    .category-block {
+      padding: 6px !important;
+
+      .category-column {
+        padding: 6px !important;
+
+        .category-block-square {
+          height: 26.44vw;
+
+          .pick-icon {
+            font-size: 18px;
+          }
+
+          .no-asset-text {
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+}

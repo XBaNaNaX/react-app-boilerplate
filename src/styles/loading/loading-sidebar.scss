@@ -1,0 +1,108 @@
+// Functions
+@function colour($value) {
+  @return map-get($colours, $value);
+}
+
+// Variables
+$preloader-height: 4px;
+
+$colours: (
+        blue: #47a8bf,
+        orange: #f57920,
+);
+
+$animation-duration: 2.5s;
+
+.loader [role="progressbar"][aria-busy="true"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: $preloader-height;
+  width: 100%;
+  z-index: 10000;
+  background-color: colour(blue);
+  animation: preloader-background linear $animation-duration infinite;
+
+  &::before,
+  &::after {
+    display: block;
+    position: absolute;
+    top: 0;
+    z-index: 10001;
+    width: 0;
+    height: $preloader-height;
+    background: #afa;
+    animation: preloader-front linear $animation-duration infinite;
+    content: '';
+  }
+
+  &::before {
+    right: 50%;
+  }
+
+  &::after {
+    left: 50%;
+  }
+}
+
+// Animations
+@keyframes preloader-background {
+  0%, 24.9% {
+    background-color: colour(blue);
+  }
+
+  25%, 49.9% {
+    background-color: colour(orange);
+  }
+
+  50%, 74.9% {
+    background-color: colour(blue);
+  }
+
+  75%, 100% {
+    background-color: colour(orange);
+  }
+}
+
+@keyframes preloader-front {
+  0% {
+    width: 0;
+    background-color: colour(orange);
+  }
+
+  24.9% {
+    width: 50%;
+    background-color: colour(orange);
+  }
+
+  25% {
+    width: 0;
+    background-color: colour(blue);
+  }
+
+  49.9% {
+    width: 50%;
+    background-color: colour(blue);
+  }
+
+  50% {
+    width: 0;
+    background-color: colour(orange);
+  }
+
+  74.9% {
+    width: 50%;
+    background-color: colour(orange);
+  }
+
+  75% {
+    width: 0%;
+    background-color: colour(blue);
+  }
+
+
+  100% {
+    width: 50%;
+    background-color: colour(blue);
+  }
+}

@@ -2,6 +2,7 @@
   "name": "react-app-boilerplate",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://XBaNaNaX.github.io/react-app-boilerplate",
   "dependencies": {
     "axios": "^0.16.1",
     "body-parser": "^1.17.2",
@@ -48,6 +49,7 @@
     "extract-text-webpack-plugin": "2.1.0",
     "file-loader": "0.11.1",
     "fs-extra": "3.0.1",
+    "gh-pages": "^1.2.0",
     "html-webpack-plugin": "2.28.0",
     "jest": "20.0.3",
     "json-loader": "^0.5.4",
@@ -71,6 +73,7 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
+    "deploy": "gh-pages -d build",
     "dev": "nodemon server",
     "start:server": "node server",
     "test": "node scripts/test.js --env=jsdom"

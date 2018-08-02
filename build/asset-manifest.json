@@ -1,7 +1,10 @@
 {
   "main.css": "static/css/main.9a0fe4f1.css",
   "main.css.map": "static/css/main.9a0fe4f1.css.map",
-  "main.js": "static/js/main.20c6b5d7.js",
-  "main.js.map": "static/js/main.20c6b5d7.js.map",
-  "static\\media\\logo.svg": "static/media/logo.5d5d9eef.svg"
+  "main.js": "static/js/main.f645f469.js",
+  "main.js.map": "static/js/main.f645f469.js.map",
+  "static\\media\\create_account_bg.png": "static/media/create_account_bg.34213017.png",
+  "static\\media\\logo.svg": "static/media/logo.5d5d9eef.svg",
+  "static\\media\\student.png": "static/media/student.c64d266b.png",
+  "static\\media\\tutor.png": "static/media/tutor.f9d7b0ad.png"
 }

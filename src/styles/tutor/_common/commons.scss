@@ -1,0 +1,433 @@
+@import '../../../stylesheets/variable';
+
+.content-wrapper{
+	padding-top: 64px;
+	float: left;
+	width: 100%;
+	@media screen and (min-width: 1200px) {
+		height: calc(100vh - 64px);
+		overflow-y: scroll;
+	}
+	// fixed position: fixed not working in macOS (Chrome browser)
+	/*transform: translateZ(0);
+	-moz-transform: translatez(0);
+	-ms-transform: translatez(0);
+	-o-transform: translatez(0);
+	-webkit-transform: translateZ(0);
+	-webkit-font-smoothing: antialiased;*/ /* seems to do the same in Safari Family of Browsers*/
+}
+.breakDiv{
+	margin-bottom: 30px !important;
+	@media screen and (max-width: 767px) {
+		margin-bottom: 20px !important;
+	}
+}
+.my-radio{
+	display: block;
+	width: 100%;
+	label{
+		width: 75%;
+	}
+}
+.right-para{
+	background: #fff;
+	padding:20px 0px 20px 0px;
+	
+	@media screen and (max-width: 767px) {
+	//	background: none !important;
+
+	}
+}
+.display-flex{
+	display: -webkit-flex; /* Safari */
+    display: flex; 
+}
+.content-part{
+	padding-top: 20px !important;
+	padding-bottom: 20px !important;
+	/*float: left;
+	width: 98.2%;
+	@media screen and (max-width: 1199px) and (min-width: 768px) {
+		width: 97.5%;
+	}
+	*/
+}
+.sutdent-detail-container {
+	.content-part {
+		height: calc( 100vh - 226px);
+    	overflow-y: auto;
+	}
+}
+.float-btn{
+	position: fixed;
+	z-index: 50;
+	button{
+		position: fixed !important;
+		//box-shadow: none !important;
+		bottom: 40px;
+		@include  button-shadow1;
+		@media screen and (min-width: 1200px){
+			right: calc((100% - 1226px)/2);
+		}
+		@media screen and (min-width: 768px) and (max-width: 1199px){
+			right: calc((100% - 750px)/2);
+		}
+		@media screen and (max-width: 767px){
+			right: 15px;
+		}
+	}
+}
+.student-offer-btn{
+	button{
+		background: #ebebeb;
+		&:hover{
+			background: #ebebeb !important;
+			div{
+				background: #ebebeb !important;
+			}
+		}
+	}
+	
+}
+.border-bot{
+	border-bottom: 1px solid #ebebeb;
+}
+.header-part{
+	padding:11px 10px 12px 10px !important;
+}
+.m-left-20{
+	@media screen and (max-width: 1199px ) and (min-width: 768px) {
+		padding-left: 20px !important;
+	}
+}
+.btn-view{
+	height: 31px;
+	margin-top: 5px;
+	margin-right: 15px;
+	cursor: pointer;
+	border-radius: 3px;
+    width: 65px;
+    padding: 3px;
+    background: #fafafa;
+    border: 1px solid #ebebeb;
+    line-height: 24px;
+    vertical-align: middle;
+    color: #999;
+    &.hover,&:focus{
+    	outline: none;
+    }
+    i{
+    	color: #999;
+    	float: left;
+    }
+}
+.btn-filter{
+	height: 31px;
+	margin-top: 5px;
+	margin-right: 15px;
+	cursor: pointer;
+	border-radius: 3px;
+    width: 65px;
+    padding: 3px;
+    background: #fafafa;
+    border: 1px solid #ebebeb;
+    line-height: 24px;
+    vertical-align: middle;
+    color: #999;
+    &.hover,&:focus{
+    	outline: none;
+    }
+    i{
+    	color: #999;
+    	float: left;
+    }
+    @media screen and (max-width: 767px){
+    	margin-right: 0px;
+    }
+   /* @media screen and (max-width: 767px){
+    	position: fixed;
+	    top: 5px;
+	    margin-right: 0.5rem !important;
+	    z-index: 200;
+	    right: 0px;
+	    background: none !important;
+	    border: none !important;
+	    color: #fff;
+	    i{
+	    	color: #fff;
+	    }
+    }*/
+}
+.select-field{
+	height: 40px !important;
+	div{
+		line-height: 35px !important;
+	}
+	svg{
+		top: 4px !important;
+	}
+}
+.page-title{
+	font-size: 20px;
+	line-height: 20px;
+	font-weight: 500;
+	padding: 10px;
+	i{
+		margin-right: 10px;
+		line-height: 20px;
+		float: left;
+		//vertical-align: middle;
+	}
+}
+.separate-gray10{
+	height: 1px;
+	margin-top: 10px;
+	border-bottom:1px solid #ebebeb;
+}
+.label-bottom{
+    color: #999;
+    font-size: 12px;
+}
+.text-link{
+	color: rgb(70, 168, 191);
+	font-weight: bold;
+	text-transform: underline;
+	cursor: pointer;
+}
+.fix-width88{
+	width: 88px !important;
+	text-align: center !important;
+	span{
+		padding: 0px !important;
+	}
+}
+.mg-top15{
+	margin-top: 15px !important;
+}
+.mg-top20{
+	margin-top: 20px;
+}
+.mg-top30{
+	margin-top: 30px;
+}
+.mg-bot20{
+	margin-bottom: 20px;
+}
+.mg-bot30{
+	margin-bottom: 30px !important;
+}
+.mg-top40 {
+	margin-top: 40px;
+}
+.mg-top70 {
+	margin-top: 70px;
+}
+.mg-top10{
+	margin-top: 10px;
+}
+.mg-top5{
+	margin-top: 5px;
+}
+.mg-bot10{
+	margin-bottom: 10px;
+}
+.padding-l0r75{
+	padding-left: 0px !important;
+	padding-right: 7.5px !important;
+}
+
+.padding-r0l75{
+	padding-right: 0px !important;
+	padding-left: 7.5px !important;
+}
+.padding-l0{
+	padding-left: 0px !important;
+}
+.padding-lr20{
+	@media screen and (min-width: 768px){
+		padding-right: 20px !important;
+		padding-left: 20px !important;
+	}
+}
+.Time,
+.Score{
+	label{
+		@media screen and (max-width: 767px) {
+			width: 140px;
+		}
+	}
+}
+.padding-r20.padding-sr25{
+	@media screen and (max-width: 767px) {
+		padding-right: 25px !important;
+	}
+}
+.spadding-lr0{
+	@media screen and (max-width: 767px) {
+		padding-left: 0px !important;
+		padding-right: 0px !important;
+	}
+}
+.spadding-l10{
+	@media screen and (max-width: 767px) {
+		padding-left: 10px !important;
+	}
+}
+.padding-l20{
+	padding-left: 20px !important;
+}
+.padding-r20{
+	padding-right: 20px !important;
+}
+.padding-lg-r30{
+	@media screen and (min-width: 1200px) {
+		padding-right: 30px !important;
+	}
+	@media screen and (max-width: 1199px) {
+		padding-right: 0px !important;
+	}
+}
+.padding-sl20{
+	@media screen and (max-width: 767px) {
+		padding-left: 20px !important;
+	}
+}
+.padding-sr20{
+	@media screen and (max-width: 767px) {
+		padding-right: 20px !important;
+	}
+}
+.padding-sr0{
+	@media screen and (max-width: 767px) {
+		padding-right: 12px !important;
+	}
+}
+.padding-sl0{
+	@media screen and (max-width: 767px) {
+		padding-left: 0.75rem !important;
+	}
+}
+.padding-l20r0{
+	padding-left: 20px !important;
+	padding-right: 0px !important;
+	@media screen and (max-width: 767px){
+		padding-left: 10px !important;
+	}
+	&.spadding-l10{
+		@media screen and (max-width: 767px) {
+			padding-left: 10px !important;
+		}
+	}
+}
+.padding-lr0{
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+
+.padding-r0{
+	padding-right: 0px !important;
+}
+.padding-r5{
+    padding-right: 5px !important;
+}
+.padding-r30{
+	padding-right: 30px !important;
+	&.spadding-lr0{
+		@media screen and (max-width: 767px) {
+			padding-left: 0px !important;
+			padding-right: 0px !important;
+		}
+	}
+}
+.pointer{
+	cursor: pointer;
+}
+.clr-gray{
+	color: #ccc;
+}
+.share-tab{
+	position: absolute;
+	right: 50px;
+	top: 0px;
+	height: 50px;
+	padding-top: 8px;
+}
+.share-title{
+	font-size: 15px;
+    font-weight: lighter;
+    color: #999;
+    padding: 10px 18px;
+	background: #fafafa;
+	border-bottom: 1px solid #ebebeb;
+}
+.share-icon{
+	font-size: 27px !important;
+    float: left;
+    margin-top: 10px;
+    margin-right: 10px;
+    width: 28px;
+    color: #ccc;
+    height: 28px;
+    text-align: center;
+}
+
+.gmail-icon{
+	background-image: url(/img/gmail.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 24px;
+	color: #999;
+}
+.line-icon{
+	background: url(/img/line.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 24px;
+	color: #999;
+}
+.color-fb{
+	color: #3b5998;
+}
+.color-google{
+	color: #ea4335;
+}
+// Text Align
+.left-align {
+  text-align: left;
+}
+.right-align {
+  text-align: right
+}
+.center, .center-align {
+  text-align: center;
+}
+
+.left {
+  float: left !important;
+}
+.right {
+  float: right !important;
+}
+
+.cursor-default {
+    cursor: default !important;
+}
+
+.cursor-pointer {
+    cursor: pointer !important;
+}
+
+.margin-r10{
+	margin-right: 10px !important;
+}
+
+.banner-block{
+	&.readonly{
+		cursor: default;
+	}
+}
+
+.text-gray{
+	color: rgba(0, 0, 0, 0.498039) !important;
+	word-break: break-all !important;
+}

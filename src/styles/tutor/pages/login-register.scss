@@ -1,0 +1,507 @@
+@import '../../../stylesheets/variable';
+
+$small-screen: 767px !default;
+$small-and-down: "only screen and (max-width : #{$small-screen})" !default;
+
+.register{
+  .guestbox{
+    top: calc(50% - 245px);
+    @media #{$small-and-down} {
+      top: 54px;
+    }
+  }
+}
+.login{
+  .guestbox{
+    top: calc(50% - 258px);
+    @media #{$small-and-down} {
+      top: 54px;
+    }
+  }
+}
+
+.guest-container{
+  .guestbox{
+    background: #ffffff;
+    width:450px;
+    position: absolute;
+    margin: auto;
+    //top: 50%;
+    left: calc(50% - 225px);
+    /*transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);*/
+    -webkit-animation: fadeIn ease-in 0.8s; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation: fadeIn ease-in 0.8s;
+    animation: fadeIn ease-in 0.8s;
+
+    -webkit-animation-fill-mode: forwards; /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+
+    -webkit-animation-duration: 0.8s;
+    -moz-animation-duration: 0.8s;
+    animation-duration: 0.8s;
+    opacity: 0;
+   @media #{$small-and-down} {
+
+      width:100%;
+     
+      left: 0;
+     
+    }
+  }
+
+
+
+  .avatar{
+    text-align: center;
+    padding: 40px 0px 20px 0px;
+    > span {
+      font-size: 100px !important;
+      color: #EBEBEB !important;
+    }
+   @media #{$small-and-down} {
+      padding: 0px 0px 0px 0px;
+    }
+  }
+
+  .displayName{
+    text-align: center;
+    color: #65B6CA;
+    font-size: 30px;
+    //padding-bottom: 30px;
+    font-weight: 300;
+   @media #{$small-and-down} {
+      display: none;
+    }
+  }
+  .linkforgot{
+    //display: none;
+    padding-top: 10px;
+    text-align: right;
+
+   @media #{$small-and-down} {
+      display: block;
+    }
+
+    > a{
+      font-size: 12px;
+      color: #999;
+    }
+  }
+  .wrapper {
+    width: 328px;
+    margin: 0px auto;
+   @media #{$small-and-down} {
+      width:100%;
+    }
+  }
+  .wrapperPadding{
+   @media #{$small-and-down} {
+      padding: 0 0.75rem !important
+    }
+  }
+
+  .left{
+    float: left;
+   @media #{$small-and-down} {
+      float: none;
+    }
+  }
+  .clear{
+   @media #{$small-and-down} {
+      clear:both;
+    }
+  }
+
+  .group-button{
+    padding: 30px 0px;
+   @media #{$small-and-down} {
+      padding: 0px;
+    }
+  }
+
+  .socialzone{
+   @media #{$small-and-down} {
+      background: #FFF;
+      padding-bottom: 35px;
+      border-top:1px #ccc solid;
+    }
+  }
+
+  .button-wrapper{
+    float:none !important;
+  }
+
+  .loginButton{
+    width: 192px;
+    box-shadow: none !important;
+
+    &:hover{
+      button{
+        background: #086378 !important;
+        -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2) !important;
+        -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2) !important;
+        box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2) !important;
+      }
+    }
+   @media #{$small-and-down} {
+      //width: 100%;
+     // padding: 20px 0px;
+     // background: #ffffff;
+      box-shadow: none !important;
+    }
+  }
+  .loginButtonLabel{
+    text-transform: none;
+    top: 9px;
+    font-weight: normal;
+  }
+
+
+  .common-text{
+    padding: 7px 19px 0px 19px;
+    color: #169cca;
+    font-weight: bold;
+    font-size: 15px;
+   @media #{$small-and-down} {
+      display: none;
+    }
+  }
+
+  .fbButton{
+    background-color: #3A589F !important;
+    width: 100%;
+    //width: 36px !important;
+    height: 36px !important;
+    border: 0 !important;
+    padding: 0px !important;
+    margin-right: 10px !important;
+   @media #{$small-and-down} {
+      //width: 48% !important;
+      //margin: 10px 2% 0px 0px !important;
+    }
+    &:hover{
+      background-color: #2d4373 !important;
+       -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2) !important;
+        -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2) !important;
+        box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2) !important;
+    }
+  }
+
+  .ggButton{
+    background-color: #DF4A32 !important;
+    //width: 36px !important;
+    width: 100%;
+    height: 36px !important;
+    border: 0 !important;
+    padding: 0px !important;
+   @media #{$small-and-down} {
+      //width: 48% !important;
+      //margin: 0 0 0 2% !important;
+    }
+    &:hover{
+      background-color: #ca0202 !important;
+       -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2) !important;
+        -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2) !important;
+        box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2) !important;
+    }
+  }
+
+  &:after{
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+  .buttonHalfWidth{
+    border-top: 1px #ccc solid;
+   @media #{$small-and-down} {
+      display: none;
+    }
+  }
+  .fa-facebook:before{
+    content: "\f09a";
+   @media #{$small-and-down} {
+      font-size: 14px;
+    }
+  }
+  .fa-facebook:after{
+   @media #{$small-and-down} {
+      font-size: 14px;
+      font-family: Roboto, sans-serif;
+     // content: "\00a0Sign in with Facebook";
+      padding-left: 20px;
+    }
+  }
+  .fa-google-plus:before {
+    content: "\f0d5";
+   @media #{$small-and-down} {
+      font-size: 14px;
+    }
+  }
+  .fa-google-plus:after {
+   @media #{$small-and-down} {
+      font-size: 14px;
+      font-family: Roboto, sans-serif;
+     // content: "\00a0Sign in with Google";
+      padding-left: 20px;
+    }
+  }
+
+  .buttonFullWidth{
+    .fbButton{
+      background-color: #3A589F !important;
+      width: 100% !important;
+      height: 36px !important;
+      border: 0 !important;
+      padding: 0px !important;
+      margin: 0px 0px 15px 0px !important;
+      &:hover{
+        background-color: #2d4373 !important;
+        -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2) !important;
+        -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2) !important;
+        box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2) !important;
+      }
+
+      .fa-facebook:before{
+        content: "\f09a";
+        font-size: 14px;
+      }
+      .fa-facebook:after{
+        font-size: 14px;
+        font-family: Roboto, sans-serif;
+        content: "\00a0Sign in with Facebook";
+        padding-left: 20px;
+      }
+    }
+
+    .ggButton{
+      background-color: #DF4A32 !important;
+      width: 100% !important;
+      height: 36px !important;
+      border: 0 !important;
+      padding: 0px !important;
+      margin: 0px 0px 25px 0px !important;
+      @media #{$small-and-down} {
+        margin: 0px 0px 20px 0px !important;
+        -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2) !important;
+        -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2) !important;
+        box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2) !important;
+      }
+      &:hover{
+        background-color: #ca0202 !important;
+      }
+
+      .fa-google-plus:before {
+        content: "\f0d5";
+        font-size: 14px;
+      }
+      .fa-google-plus:after {
+        font-size: 14px;
+        font-family: Roboto, sans-serif;
+        content: "\00a0Sign in with Google";
+        padding-left: 20px;
+      }
+    }
+
+    .loginButton{
+      width: 100%;
+      margin: 30px 0px 41px 0px;
+      padding: 0px;
+      > button {
+          line-height: normal !important;
+        }
+    }
+    .login-footer-button{
+      display: block !important;
+      > button {
+        width: 100% !important;
+      }
+    }
+  }
+
+  .register-title{
+    text-align: center;
+    color: #000;
+    font-size: 30px;
+    font-weight: 300;
+    padding: 50px 0px 30px 0px;
+    @media #{$small-and-down} {
+      padding-top: 30px;
+      font-size: 25px;
+      padding-bottom: 20px;
+    }
+  }
+
+  .grayline{
+    border-bottom:1px solid #ccc;
+    @media #{$small-and-down} {
+      border-bottom: none;
+    }
+  }
+
+  .forgot-hint{
+    text-align: center;
+    color: #999;
+    margin-top: -20px;
+    margin-bottom: 20px;
+  }
+
+  .forgotButtonGroup{
+    padding: 60px 0px 20px 0px;
+
+    @media #{$small-and-down} {
+      padding: 20px 0px 20px 0px;
+    }
+
+    .cancelButton{
+      float: left;
+      width: 48% !important;
+
+      &:hover{
+        button{
+          background-color: #ECEFF4 !important;
+        }
+      }
+
+      > button {
+        line-height: normal !important;
+        > div > div > span {
+          color: #999 !important;
+        }
+      }
+    }
+
+    .forgotButton{
+      float: right;
+      width: 48% !important;
+      > button {
+
+        line-height: normal !important;
+      }
+    }
+    &:after{
+      content: '';
+      display: block;
+      clear: both;
+    }
+  }
+
+  .hideForAcknowledge{
+    display: block;
+  }
+  .forgotAcknowledge{
+    display: none;
+    #icon{
+      text-align: center;
+      padding: 50px 0px 20px 0px;
+    }
+    .acknowledge-title{
+      text-align: center;
+      color: #000;
+      font-size: 30px;
+      padding: 20px 0px 30px 0px;
+    }
+    .gotitButton{
+      width: 100% !important;
+      margin: 30px 0px 20px 0px;
+      
+      &:hover{
+        button{
+          background-color: #ECEFF4 !important;
+        }
+      }
+
+      > button {
+
+        line-height: normal !important;
+        > div > div > span {
+          color: #999 !important;
+        }
+      }
+    }
+  }
+
+  .reset-title{
+    text-align: center;
+    color: #000;
+    font-size: 30px;
+    padding-top: 50px;
+    @media #{$small-and-down} {
+      padding-top: 30px;
+    }
+  }
+
+
+  .alert-box{
+    .token-para{
+      text-align: center;
+
+      .token-title{
+        font-size: 30px;
+        color: #CC0000;
+      }
+
+      .token-hint{
+        color: #999;
+      }
+    }
+
+    @media #{$small-and-down} {
+      height: 100%;
+      padding: 50px 12px 0px 12px;
+      .token-title{
+        padding-top: 20px;
+      }
+    }
+
+  }
+}
+
+.snack-bar-login-style {
+  div > span {
+    color: #CC0000;
+    font-weight: bold;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 767px){
+  body.login{
+    background: #fff;
+   background-image: none !important;
+  }
+
+  .forgot-wrapper{
+    width: 100% !important;
+    height: 100% !important;
+    position: fixed !important;
+    top: 0px !important;
+    padding-top: 20% !important;
+  }
+}
+
+// mobile class
+.link-sign-up-wrapper {
+  color: #AAAAAA;
+  font-size: 12px;
+  .link-sign-up {
+    border-bottom: 1px solid #47a8bf;
+    color: #47a8bf;
+  }
+}
+.login-mobile-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  .navBarMenuChild > div {
+    line-height: 48px !important;
+    height: 54px !important;
+    text-align: center;
+  }
+  .login-mobile-logo {
+    float: none !important;
+  }
+}

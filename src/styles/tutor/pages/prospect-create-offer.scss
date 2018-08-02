@@ -1,0 +1,1175 @@
+@import '../../../stylesheets/variable';
+
+.ProspectsCreateOfferLayout {
+  margin-top: 30px;
+  float: left;
+  width: 100%;
+
+  .student-detail {
+    @include add-fade-in();
+    .student-avatar {
+      border: 2px solid #FFF;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .student-name {
+      width: 100%;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      font-size: 22px;
+    }
+    .student-paid {
+      height: 32px;
+      min-width: 150px;
+      float: left;
+      font-weight: $font-bold;
+      color: #ffffff;
+      text-align: center;
+      margin-bottom: 18px;
+      span {
+        position: relative;
+        top: 8px;
+      }
+    }
+    .student-result {
+      height: 32px;
+      width: 120px;
+      font-weight: $font-bold;
+      color: #ffffff;
+      text-align: center;
+      margin-bottom: 18px;
+      span {
+        position: relative;
+        top: 8px;
+      }
+    }
+    .student-pre-test {
+      width: 260px;
+      white-space: pre;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .student-correct {
+      font-size: 14px;
+      margin-top: 3px;
+      margin-bottom: 3px;
+    }
+    .student-taken {
+      color: #AAAAAA;
+      font-size: 12px;
+    }
+  }
+  .offer-bar {
+    height: 50px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    @include material-box-shadow(1);
+    .bar-text-gray {
+      color: $clr-gray;
+      font-size: 18px;
+      position: relative;
+      top: 6px;
+      &.next {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+    .bar-text-blue {
+      color: $clr-dark-blue2;
+      font-size: 18px;
+      position: relative;
+      top: 6px;
+    }
+  }
+  .view-mode {
+    float: right;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    .create-offer-btn {
+      border-radius: 0 !important;
+      @include material-box-shadow(1);
+      span {
+        text-transform: none !important;
+      }
+
+    }
+  }
+
+  //right panel
+  .create-offer-right-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #cccccc;
+    .step-btn-text {
+      &:hover {
+        background-color: transparent !important;
+      }
+      > div > span {
+        height: 50px !important;
+      }
+      > span {
+        height: 50px !important;
+      }
+    }
+  }
+  .create-offer-right-body {
+    background-color: #ffffff;
+    //border-bottom: 1px solid #cccccc;
+    padding-bottom: 20px;
+    //min-height: 64vh;
+    height: calc(100vh - 223px);
+   //max-height: 74vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    @media screen and (max-width: 767px){
+      //height: calc(100vh - 183px);
+      height: calc(100vh - 102px);
+      padding-bottom: 0;
+    }
+  }
+  .create-offer-right-footer {
+    border-top: 1px solid #cccccc;
+    background-color: #ffffff;
+    //height: 56px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    @media screen and (max-width: 767px) {
+      position: fixed;
+      width: 100%;
+      bottom: 0px;
+    }
+  }
+
+  //question
+  .ProspectQuestionCard {
+    padding: 10px 20px;
+    @include add-fade-in();
+    .offer-question-card {
+      .question-card-title {
+        font-weight: $font-bold;
+        font-size: 18px;
+        margin-bottom: 10px;
+        display: inline-block;
+        width: 100%;
+        .question-index {
+          margin-right: 10px;
+          float: left;
+        }
+        .question-title {
+
+        }
+      }
+      .question-card-choice {
+        font-size: 16px;
+        padding-left: 20px;
+        margin-bottom: 20px;
+        display: inline-block;
+        width: 100%;
+        line-height: 24px;
+        .choice-icon {
+          color: #EE0000;
+          margin-right: 10px;
+        }
+        .choice-title {
+          position: relative;
+          bottom: 8px;
+          display: inline-block;
+        }
+      }
+      .question-card-explanation {
+        padding-bottom: 20px;
+        color: #999;
+        font-size: 16px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #ebebeb; 
+        .explanation-title {
+
+        }
+      }
+      .question-card-insert-explanation {
+        border-top: 1px solid #ccc;
+        .hint-text-explanation {
+          .material-icons {
+            font-size: 16px;
+            position: relative;
+            top:2px;
+          }
+        }
+      }
+    }
+  }
+  //ProspectAddFeedbackCard
+  .ProspectAddFeedbackCard {
+    .add-score {
+      .warn-text {
+        color: #ccc;
+        font-size: 10px;
+        font-weight: 300;
+      }
+    }
+    @include add-fade-in();
+    .col {
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+      margin-top: 10px;
+      min-height: 72px;
+    }
+    .btn-add-report {
+      margin: 0;
+      padding: 0 !important;
+      display: flex;
+      align-items: flex-end;
+    }
+    .attachment-btn {
+      //float: right;
+      //bottom: 50px;
+    }
+  }
+  //ProspectChooseAssets & ProspectPricingOffer
+  .ProspectChooseAssets, .ProspectPricingOffer {
+    //padding: 10px 20px 10px 5px;
+    padding: 10px 5px 10px 10px;
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    @include add-fade-in();
+    .ProspectChooseAssetGrid {
+      .exam-block-container {
+        position: relative;
+        padding: 10px !important;
+
+        .selected-by-click {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          cursor: pointer;
+          z-index: 10;
+        }
+        $tick_color:#fff;
+        $unchecked_background_color: #fff;
+        $checked_background_color:#00bcd4;
+        $border_checkbox_color:#ccc;
+        @include add-testhero-checkbox($tick_color,$checked_background_color,$unchecked_background_color,$border_checkbox_color);
+
+        .exam-block {
+          position: relative;
+          margin: 0 !important;
+          .upper-block {
+            height:160px;
+          }
+          .bottom-block {
+            //height: 46px;
+            height: 50px;
+            margin-top: -2px;
+            display: flex;
+            align-items: center;
+            .type {
+              //font-size: 30px;
+              font-size: 34px;
+              padding-left: 10px !important;
+            }
+            .detail {
+              //margin-top: 2px;
+            }
+            .grid-taken {
+              color: #000;
+              display: block;
+              @include add-text-overflow-ellipsis(100%);
+            }
+          }
+        }
+      }
+    }
+    .col {
+      padding: 0 !important;
+    }
+    .choose-asset-header {
+      display: none;
+      padding-left: 0 !important;
+      margin-bottom: -10px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 8px !important;
+      padding-top: 8px !important;
+      .asset-header-textfield {
+        padding-left: 10px !important;
+        .search-asset-text {
+          border: 1px solid #ccc;
+          border-radius: 3px;
+          height: 34px !important;
+          input {
+            padding-left: 10px !important;
+          }
+        }
+      }
+      .asset-header-button {
+        padding-right: 10px !important;
+        .asset-button-filter {
+
+        }
+      }
+    }
+    .choose-asset-body {
+      padding-right: 15px !important;
+    }
+    .need-height {
+      height: 106px;
+    }
+    .ProspectChooseAssetList {
+      //height: 160px;
+      height: 100%;
+      width: 102%;
+      // new 2
+      .asset-need-border {
+        //border-bottom: 1px solid;
+        //border-right: 1px solid;
+        //padding-top: 8px !important;
+        //padding-bottom: 8px !important;
+        //margin-left: -10px;
+        //padding-left: 15px !important;
+        height: 106px;
+      }
+      .edit-price-need-border {
+        border-left: 1px solid #ebebeb;
+        border-bottom: 1px solid #ebebeb;
+        height: 106px;
+        text-align: center;
+        /* padding-top: 15px !important; */
+        /* padding-bottom: 15px !important; */
+        position: relative;
+        //left: 5px;
+        left: 8px;
+        //&:last-of-type{
+        //  border-bottom: none;
+        //}
+        .type-column {
+          text-align: center;
+          //border-right: 1px solid #ebebeb;
+          height:100%;
+          padding-top: 15px !important;
+          color: #aaa;
+          //padding-left: 6px !important;
+        }
+        .price-column {
+          position: relative;
+          left: -5px;
+          border-left: 1px solid #ebebeb;
+          height:100%;
+          padding-top: 15px !important;
+        }
+      }
+      .textfield-edit-price {
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        height: 30px !important;
+        width: 50% !important;
+        text-align: center;
+        input {
+          text-align: center;
+        }
+      }
+      // new 2
+      .prospect-choose-asset-list-block {
+        //height: 100%;
+        //padding: 0 !important;
+        height: 75px;
+        padding: 0 !important;
+        width: 100%;
+        border-bottom: 1px solid #ebebeb;
+        //border-right: 1px solid #ebebeb;
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
+        margin-left: -10px;
+        padding-left: 18px !important;
+        //&:last-of-type {
+        //  border-bottom: none;
+        //}
+        > div {
+          height: 100%;
+        }
+        .prospect-choose-asset-list-content {
+          //height: 100% !important;
+          //padding: 15px 0 0 272px !important;
+          height: 92px !important;
+          padding: 0 0 0 156px !important;
+          .textfield-edit-price {
+            height: 50px !important;
+            top:-10px;
+            label {
+              top: 8px !important;
+            }
+            input {
+              margin-top: 0 !important;
+              padding-bottom: 10px !important;
+              font-size: 20px !important;
+            }
+          }
+          .selected-by-click {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+          }
+          $tick_color:#fff;
+          $unchecked_background_color: #fff;
+          $checked_background_color:#00bcd4;
+          $border_checkbox_color:#000;
+          @include add-testhero-checkbox($tick_color,$checked_background_color,$unchecked_background_color,$border_checkbox_color); //default param $tick_color[color_code],$checked_background_color[color_code]
+
+          .remove-asset-pricing-offer {
+            color: #aaaaaa;
+            position: absolute;
+            right: 10px;
+            top: 0;
+            cursor: pointer;
+          }
+
+          .prospect-choose-asset-list-title {
+            font-size: 20px;
+            //font-weight: $font-bold;
+            margin-bottom: 8px;
+            line-height: 26px;
+            @include add-text-overflow-ellipsis(560px);
+          }
+          .prospect-choose-asset-list-description {
+            font-size: 14px;
+            color: #aaa;
+            //margin-bottom: 10px;
+            @include add-text-overflow-ellipsis(560px);
+          }
+          .prospect-choose-asset-list-type {
+            display: inline-block;
+            background: #111;
+            color: #fff;
+            padding: 2px;
+            min-width: 60px;
+            text-align: center;
+            border-radius: 2px;
+            margin-bottom: 10px;
+            font-size: 12px;
+            line-height: 20px;
+            span {
+              display: flex;
+              padding-left: 2px;
+              padding-right: 2px;
+              i {
+                font-size: 18px;
+              }
+            }
+          }
+          .prospect-choose-asset-list-price {
+            width: 100%;
+            margin-top: 5px;
+            .material-icons {
+              margin-right: 15px;
+              margin-left: 0px;
+              font-size: 36px;
+            }
+            .price-text {
+              display: inline-block;
+              height: auto;
+              width: 40%;
+              border-bottom: 1px solid #ebebeb;
+              .readonly-price {
+                font-weight: 500;
+                font-size: 20px;
+                position: relative;
+                bottom: 10px;
+              }
+            }
+          }
+          .block-choose-asset-img {
+
+            &.full-w-h {
+              width: 100% !important;
+              height: 100% !important;
+            }
+            .edit-assets-offer {
+              position: absolute !important;
+              top: 10px;
+              left: 10px;
+              margin: 0 1rem 0 0 !important;
+              height: 20px !important;
+              line-height: 10px !important;
+              min-width: 20px !important;
+              width: 20px !important;
+              .material-icons {
+                font-size: 12px;
+                color: #FFF;
+              }
+            }
+          }
+          .choose-asset-img {
+            border: 1px solid #cccccc;
+            width: 130px !important;
+            height: 73px !important;
+            background-color: #ffffff;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0 !important;
+            .label-bottom {
+              position: absolute;
+              bottom: 0;
+              color: #fff;
+              background: #000;
+              font-size: 14px;
+              line-height: 14px;
+              font-weight: bold;
+              padding: 2px 5px;
+              right: 0;
+              min-width: 60px;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //ProspectPricingOffer ** header
+  .ProspectPricingOffer {
+    .pricing-offer-body {
+      display: inline-block;
+      .asset-table-header {
+        color: #9e9e9e;
+        font-size: 14px;
+        font-weight: 500;
+        /* margin-left: -10px; */
+        padding-left: 20px !important;
+        line-height: 40px;
+        border-bottom: 1px solid #ebebeb;
+        width: 102%;
+        left: -10px;
+        position: relative;
+        .asset-chosen {
+        }
+        .asset-row {
+          .type-column {
+            text-align: center;
+            border-left: 1px solid #ebebeb;
+            position: relative;
+            left: 10px;
+            height: 100%;
+          }
+          .price-column {
+            text-align: center;
+            position: relative;
+            //left: 10px;
+            left: 9px;
+            border-left: 1px solid #ebebeb;
+            height: 100%;
+          }
+        }
+      }
+    }
+    .pricing-offer-header {
+      border-bottom: 1px solid #ebebeb;
+      //margin-left: 15px !important;
+      //padding-bottom: 15px !important;
+
+      width: 102% !important;
+      margin-left: -10px !important;
+      margin-top: -10px;
+      height: 82px;
+      //.asset-chosen {
+      //  color: #aaaaaa;
+      //  font-size: 16px;
+      //  font-weight: $font-bold;
+      //  position: relative;
+      //  top: 8px;
+      //}
+      .offer-name-block {
+        padding-left: 20px !important;
+        padding-right: 12px !important;
+        padding-bottom: 10px !important;
+        //border-right: 1px solid #ebebeb;
+      }
+      .type-offer-block {
+        border-left: 1px solid #ebebeb;
+        padding-top: 15px !important;
+        padding-left: 40px !important;
+        height: 100%;
+        position: relative;
+        //left: 4px;
+        left: 9px;
+        .offer-left {
+          p {
+            font-size: 20px;
+            margin-bottom: 3px;
+          }
+        }
+        .offer-right {
+          position: relative;
+          //top: 10px;
+          left: 12px;
+          .concurrency-symbol {
+            float: left;
+            position: relative;
+            margin-right: 10px;
+            top: 12px;
+            font-size: 20px;
+          }
+        }
+        .pricing-setting {
+          margin-bottom: 5px;
+        }
+        .type-offer {
+          //padding-top: 15px !important; //old 10px
+          display: flex;
+          flex-direction: column;
+        }
+        //.textfield-package-price {
+        //  height: 50px !important;
+        //  margin-top: 10px;
+        //  label {
+        //    top: 20px !important;
+        //  }
+        //  input {
+        //    margin-top: 0 !important;
+        //  }
+        //}
+
+        .textfield-package-price {
+          border: 1px solid #ccc;
+          border-radius: 3px;
+          //height: 32px !important;
+          width :55% !important;
+          font-size: 20px !important;
+          font-weight: $font-bold;
+          input {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+.ProspectChooseAssets .col.choose-asset-body{
+  @media screen and (min-width: 768px) {
+    padding-right: 18px !important;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 5px !important;
+    padding-top: 13px !important;
+  }
+}
+.textfield-offer-name{
+  @media screen and (max-width: 767px) {
+    //margin-top: 10px;
+  }
+}
+.radio-group{
+  @media screen and (max-width: 767px) {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .ProspectsCreateOfferLayout {
+    .ProspectPricingOffer {
+      .pricing-offer-header {
+        .offer-name-block {
+          position: relative !important;
+          left: 9px !important;
+          padding-left: 10px !important;
+        }
+        .type-offer-block {
+          left: 9px;
+          padding-left: 15px !important;
+          .offer-left {
+            p {
+              font-size: 16px;
+            }
+            .set-as-package {
+              label {
+                font-size: 12px !important;
+                left: -8px;
+              }
+            }
+          }
+          .offer-right {
+            left:0;
+            .concurrency-symbol {
+              top:8px !important
+            }
+            .textfield-package-price {
+              height: 40px !important;
+              font-size: 16px !important;
+            }
+          }
+        }
+      }
+      .pricing-offer-body {
+        .asset-table-header {
+          font-size: 16px;
+          .asset-row {
+            .type-column {
+              left: 9px;
+            }
+            .price-column {
+              left:9px;
+            }
+          }
+        }
+      }
+    }
+    //right panel
+    .create-offer-right-header {
+
+    }
+    .create-offer-right-body {
+      min-height: 74vh;
+    }
+    .create-offer-right-footer {
+
+    }
+
+    .student-detail-medium {
+      padding: 0 !important;
+      margin-top: -28px;
+      @include material-box-shadow(1);
+      .student-detail-medium-body {
+        padding: 20px 16px 43px 196px !important;
+
+      }
+      .student-avatar-img {
+        border: 2px solid #FFF;
+        @include material-box-shadow(1);
+        margin-top: 8px;
+      }
+      .student-name {
+      }
+      .student-result {
+        span {
+        }
+      }
+      .student-pre-test {
+        width: 550px;
+      }
+      .student-correct {
+      }
+      .student-taken {
+      }
+    }
+    //ProspectChooseAssets
+    .ProspectChooseAssets, .ProspectPricingOffer {
+
+      .ProspectChooseAssetGrid {
+        .exam-block-container {
+          .exam-block {
+            .upper-block {
+              height:144px;
+            }
+          }
+        }
+      }
+      .col {
+      }
+      .ProspectChooseAssetList {
+
+        .prospect-choose-asset-list-block {
+
+          > div {
+
+          }
+          .prospect-choose-asset-list-content {
+
+            .prospect-choose-asset-list-title {
+
+              @include add-text-overflow-ellipsis(440px);
+            }
+            .prospect-choose-asset-list-description {
+              @include add-text-overflow-ellipsis(440px);
+            }
+            .prospect-choose-asset-list-type {
+
+            }
+            .prospect-choose-asset-list-price {
+              .material-icons {
+
+              }
+              .price-text {
+                width: 40%;
+                .readonly-price {
+                }
+              }
+            }
+            .choose-asset-img {
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .ProspectsCreateOfferLayout {
+    margin-top: -54px;
+    //right panel
+    .create-offer-right-header {
+
+    }
+    .create-offer-right-body {
+
+    }
+    .create-offer-right-footer {
+
+    }
+    //ProspectAddFeedbackCard
+    .ProspectAddFeedbackCard {
+      .add-score-input {
+        width: 100% !important;
+      }
+      .attachment-btn {
+        float: right;
+        bottom: 50px;
+      }
+    }
+
+    .student-detail-sm {
+      margin-bottom: 10px !important;
+    }
+    .offer-question-card {
+      margin-bottom: 10px !important;
+    }
+    .student-detail-medium {
+      padding: 0 !important;
+      margin-top: 0;
+      .student-detail-medium-body {
+        padding: 10px 16px 20px 154px !important;
+
+      }
+      .student-avatar-img {
+        border: 2px solid #FFF;
+        @include material-box-shadow(1);
+        margin-top: 8px;
+        width: 120px;
+        height: 120px;
+      }
+      .student-avatar {
+      }
+      .student-name {
+      }
+      .student-result {
+        margin-top: 5px;
+        margin-bottom: 3px;
+        span {
+        }
+      }
+      .student-pre-test {
+        width: 150px;
+      }
+      .student-correct {
+      }
+      .student-taken {
+      }
+    }
+    .create-offer-sm {
+      border-radius: 0 !important;
+      z-index: 500;
+      position: fixed;
+      top: 7px;
+      right: 2%;
+      button {
+        border-radius: 0 !important;
+      }
+    }
+    .question-card-choice {
+      padding-left: 0 !important;
+      margin-left: -5px !important;
+    }
+    //ProspectChooseAssets
+    .ProspectChooseAssets, .ProspectPricingOffer {
+      //padding: 10px 10px 10px 0;
+      //padding: 10px 0 10px 0;
+      padding: 0 0 10px 0;
+
+      .pricing-offer-header-sm {
+        .package-sm {
+          background-color: #47a8bf;
+          display: block;
+          color: #ffffff;
+          padding-bottom: 12px !important;
+          padding-top: 12px !important;
+          .check-package-sm {
+            padding-left: 12px !important;
+            p {
+              font-size: 16px;
+            }
+            .set-as-package {
+              label {
+                color: #ffffff !important;
+                margin-left: -12px;
+                font-size: 11px;
+                font-weight: 200;
+              }
+              svg:first-child {
+                color: #fafafa !important;
+                fill: #fafafa !important;
+              }
+              svg:last-child {
+                color: #fafafa !important;
+                fill: #fafafa !important;
+              }
+            }
+          }
+          .package-price-sm {
+            .concurrency-symbol {
+              color: #000;
+              font-size: 20px;
+              font-weight: 500;
+              float: left;
+              line-height: 42px;
+              margin-right: 8px;
+            }
+            .textfield-package-price {
+              height: 42px !important;
+              border: 1px solid #ccc;
+              border-radius: 3px;
+              font-size: 20px !important;
+              font-weight: $font-bold;
+              input {
+                text-align: center;
+              }
+            }
+          }
+        }
+        .offer-name-block-sm {
+          padding-top: 6px !important;
+          padding-left: 12px !important;
+          padding-right: 12px !important;
+          padding-bottom: 20px !important;
+          border-bottom: 1px solid #ebebeb;
+          .textfield-offer-name {
+
+          }
+        }
+      }
+
+      .asset-filter {
+        width: 45% !important;
+        margin: 0 !important;
+        &:nth-of-type(1) {
+          margin-right: 20px !important;
+        }
+        > div {
+          font-size: 12px !important;
+        }
+      }
+      .col {
+      }
+      .pricing-offer-body {
+        .asset-table-header {
+          left: 0;
+          margin-left: 0 !important;
+          padding-left: 12px !important;
+          border-bottom: none !important;
+        }
+      }
+      .need-height {
+        height: auto !important;
+      }
+      .ProspectChooseAssetList {
+        height: auto;
+        margin-right: -20px;
+        .asset-row-sm{
+          width: 103%;
+          padding-top: 12px !important;
+          border-bottom: 1px solid #ebebeb;
+          padding-bottom: 12px !important;
+          &.first {
+            border-top:1px solid #ebebeb;
+          }
+        }
+        .prospect-choose-asset-list-block-sm {
+          padding-left: 12px;
+          .choose-asset-img {
+            border: 1px solid #cccccc;
+            //width: 102px !important;
+            //height: 57px !important;
+            width: 96px !important;
+            height: 54px !important;
+            background-color: #ffffff;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0 !important;
+            position: relative;
+            .label-bottom {
+              position: absolute;
+              bottom: 0;
+              color: #fff;
+              background: #000;
+              font-size: 12px;
+              line-height: 12px;
+              font-weight: bold;
+              padding: 2px 5px;
+              right: 0;
+              min-width: 60px;
+              text-align: center;
+            }
+          }
+          .image-section {
+            //width: 104px !important;
+            width: 98px !important;
+          }
+          .title-section-sm {
+            padding-left: 12px !important;
+            height: auto
+          }
+          .prospect-choose-asset-list-title-sm {
+            //height: 40px;
+            font-size: 14px;
+            //margin-bottom: 2px;
+            line-height: 20px;
+            @include add-text-overflow-ellipsis(100px)
+          }
+          .prospect-choose-asset-list-type-sm {
+            color: #ccc;
+            font-size: 14px;
+            font-weight: 300;
+          }
+          .edit-section {
+            padding-left: 0 !important;
+            float: right;
+            .remove-asset-pricing-offer {
+              float: right;
+              padding-right: 12px;
+              padding-top: 10px;
+              color: #aaaaaa;
+              font-size: 16px;
+            }
+            .price-column-sm {
+              .textfield-edit-price {
+                width: 80% !important;
+                input {
+                  font-size: 12px !important;
+                }
+              }
+            }
+          }
+        }
+        .prospect-choose-asset-list-block {
+
+          > div {
+
+          }
+          .prospect-choose-asset-list-content {
+            padding: 15px 0 0 172px !important;
+            .prospect-choose-asset-list-title {
+              @include add-text-overflow-ellipsis(138px);
+              margin-bottom: 5px;
+              font-size: 16px;
+            }
+            .prospect-choose-asset-list-description {
+              @include add-text-overflow-ellipsis(138px);
+              margin-bottom: 5px;
+              font-size: 12px;
+            }
+            .prospect-choose-asset-list-type {
+
+            }
+            .prospect-choose-asset-list-price {
+              .material-icons {
+                margin-right: 10px;
+                margin-left: 0;
+                font-size: 30px;
+              }
+              .price-text {
+                width: 70%;
+                .readonly-price {
+                  font-size: 18px;
+                  bottom: 10px;
+                }
+              }
+
+              .textfield-edit-price {
+                height: 46px !important;
+                width: 70% !important;
+                label {
+                  top: 18px !important;
+                }
+                input {
+                  margin-top: 0 !important;
+                  padding-bottom: 0 !important;
+                  font-size: 16px !important;
+                }
+              }
+            }
+            .choose-asset-img {
+              width: 140px;
+              height: 79px;
+            }
+          }
+        }
+      }
+
+      .ProspectChooseAssetGrid {
+        .exam-block-container {
+          padding: 5px !important;
+          .exam-block {
+            .upper-block {
+              height:96px;
+            }
+            .bottom-block {
+              .type {
+                padding-left: 3px !important;
+              }
+              .detail {
+                padding-left: 0 !important;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    //ProspectPricingOffer ** header
+    .ProspectPricingOffer {
+      .pricing-offer-header {
+        border-bottom: none !important;
+        margin-top: -10px !important;
+        margin-left: 15px !important;
+        padding-bottom: 0 !important;
+        width: 95% !important;
+        .offer-name-block {
+
+        }
+        .type-offer-block {
+          margin-top: -10px !important;
+          padding-top: 0 !important;
+          .type-offer {
+            display: inline !important;
+            margin-right: 10px !important;
+            padding-top: 5px !important;
+            margin-bottom: 5px !important;
+            .type-offer-xs {
+              width: 100% !important;
+              display: block !important;
+              margin: 8px auto;
+            }
+          }
+          .textfield-package-price {
+            margin-top: 8px !important;
+            width: 100% !important;
+            label {
+              top: 20px !important;
+            }
+            input {
+              margin-top: 0 !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

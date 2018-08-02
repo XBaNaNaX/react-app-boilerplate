@@ -1,0 +1,389 @@
+$clr-light-blue: #46a8c1;
+$clr-dark-blue: #47a8bf;
+$clr-info: #007bb6 ;
+$clr-dark-blue2: #086378;
+$clr-green: #009900;
+$clr-red: #EE0000;
+$clr-dark-red: #cc0000;
+$clr-gplus: #d62d20;
+$clr-hot: #e72023;
+$clr-gray: #cccccc;
+$clr-dark-gray: #999;
+$clr-dark-gray2: #666;
+$clr-light-gray: #ebebeb;
+$clr-light-gray2: #fafafa;
+$clr-orange: #f57920;
+$clr-orange2:  #F47920;
+$clr-dark-orange: #dc640d;
+//font weight
+$font-lighter : 300;
+$font-bold : 500;
+$medium-screen: 1199px !default;
+$medium-and-down: "only screen and (max-width : #{$medium-screen})" !default;
+$small-screen: 767px !default;
+$small-and-down: "only screen and (max-width : #{$small-screen})" !default;
+.clr-blue{
+    color: $clr-light-blue !important;
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@mixin button-shadow() {
+    -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2) !important;
+    -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2) !important;
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2) !important;    
+}
+@mixin button-shadow1() {
+    -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.4) !important;
+    -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.4) !important;
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.4) !important;    
+}
+
+@mixin tab-menu-styles() {
+    .user-profile-tab-menu {
+        cursor: pointer;
+        height: 50px;
+        background-color: #FFFFFF;
+        padding-left: 25%;
+        padding-right: 25%;
+        text-align: center;
+        @include material-box-shadow(1);
+        .col {
+            height: 100%;
+            padding: 0 !important;
+        }
+        .user-profile-tab {
+            //height: 100%;
+            font-weight: $font-bold;
+            color: #cccccc;
+            height: 50px;
+            .material-icons {
+                color: #cccccc !important;
+            }
+            &.active {
+                color: #000;
+                .user-profile-menu {
+                    margin-top: 10px;
+                }
+                .material-icons {
+                    color: #000 !important;
+                }
+            }
+        }
+        .active-tab-menu {
+            height: 5px;
+            position: relative;
+            top: 47px;
+            width: 100%;
+            background-color: $clr-dark-blue;
+            opacity: 0; /* make things invisible upon start */
+            -webkit-animation: fadeInLeftToRight ease-in 0.2s; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+            -moz-animation: fadeInLeftToRight ease-in 0.2s;
+            animation: fadeInLeftToRight ease-in 0.2s;
+
+            -webkit-animation-fill-mode: forwards; /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+            -moz-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+
+            -webkit-animation-duration: 0.15s;
+            -moz-animation-duration: 0.15s;
+            animation-duration: 0.15s;
+        }
+        .user-profile-menu {
+            margin-top: 14px;
+        }
+    }
+}
+
+@mixin material-box-shadow($level:1) {
+    @if $level == 1 {
+        //box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+        -webkit-box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px !important;
+        -moz-box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px !important;
+        box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px !important;
+    } @else if $level == 2 {
+        box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2)!important;
+    } @else if $level == 3 {
+        box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3)!important;
+    } @else if $level == 4 {
+        box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3)!important;
+    } @else if $level == 5 {
+        box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.3)!important;
+    } @else {
+        box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3)!important;
+    }
+}
+
+// center any object
+@mixin center-any-object() {
+    position: absolute;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+//left side home menu (Tablet)
+@mixin side-home-menu-tablet() {
+    .home-side-bar-menu {
+        height: 160px !important;
+        text-align: center;
+    }
+    .side-bar-counter {
+        width: 100% !important;
+        text-align: center !important;
+        margin: 0 !important;
+        height:50px !important;
+    }
+    .primary-counter {
+        padding-top: 18px;
+    }
+    .primary-text {
+
+    }
+    .home-side-bar-menu {
+        .ViewCursorRoot {
+            opacity: 0;
+            width: 0;
+            height: 5px;
+            -webkit-animation: fadeInLeftToRight ease-in 0.5s; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+            -moz-animation: fadeInLeftToRight ease-in 0.5s;
+            animation: fadeInLeftToRight ease-in 0.5s;
+
+            -webkit-animation-fill-mode: forwards; /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+            -moz-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+
+            -webkit-animation-duration: 0.2s;
+            -moz-animation-duration: 0.2s;
+            animation-duration: 0.2s;
+        }
+    }
+}
+
+@-webkit-keyframes fadeInLeftToRight { from { opacity:0;width: 0 } to { opacity:1; width: 100%} }
+@-moz-keyframes fadeInLeftToRight { from { opacity:0;width: 0} to { opacity:1; width: 100%} }
+@keyframes fadeInLeftToRight{ from { opacity:0;width: 0} to { opacity:1; width: 100%} }
+
+//home right panel student offer (Tablet)
+@mixin home-right-panel-student-offer-tablet() {
+    .student-offer-card-block {
+        width: 334px !important;
+    }
+}
+//home right panel student offer (Mobile)
+@mixin home-right-panel-student-offer-mobile() {
+    .student-wait-offer{
+        padding-top: 10px;
+    }
+    .student-offer-card {
+        width: 100% !important;
+        background-color: #ffffff;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    .student-offer-card-block {
+        width: 100% !important;
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+    }
+}
+@mixin add-fade-in($duration:0.5s) {
+        -webkit-animation: fadeIn ease-in $duration; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+        -moz-animation: fadeIn ease-in $duration;
+        animation: fadeIn ease-in $duration;
+
+        -webkit-animation-fill-mode: forwards; /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+        -moz-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+
+        -webkit-animation-duration: $duration;
+        -moz-animation-duration: $duration;
+        animation-duration: $duration;
+}
+
+@mixin add-text-overflow-ellipsis($width:200px) {
+    width: $width;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin add-testhero-checkbox($tick_color:#F44336,$checked_background_color:#eeeeee,$unchecked_background_color:#fff,$border_checkbox_color:#cccccc) {
+    .testhero-checkbox {
+        position: absolute;
+        top: 10px !important;
+        left: 10px;
+        margin: 0 1rem 0 0;
+        cursor: pointer;
+        opacity: 1 !important;
+    }
+
+    .testhero-checkbox:before {
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        content: "";
+        position: absolute;
+        z-index: 2;
+        left: 0;
+        width: 24px;
+        height: 24px;
+        border: 2px solid $border_checkbox_color;
+        cursor: pointer;
+        border-radius: 2px;
+    }
+
+    .testhero-checkbox:checked:before {
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        height: 8px;
+        border-color: $tick_color;
+        border-top-style: none;
+        border-right-style: none;
+        width: 18px;
+        position: absolute;
+        top: 5px;
+        left: 3px;
+        z-index: 2;
+        cursor: pointer;
+    }
+
+    .testhero-checkbox:checked:after {
+        background: $checked_background_color;
+    }
+
+    .testhero-checkbox:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 26px;
+        height: 26px;
+        background: $unchecked_background_color;
+        cursor: pointer;
+        z-index: 1;
+        border-radius: 2px;
+    }
+}
+// animation fade in
+@-webkit-keyframes fadeIn { from { opacity:0 } to { opacity:1} }
+@-moz-keyframes fadeIn { from { opacity:0} to { opacity:1} }
+@keyframes fadeIn{ from { opacity:0} to { opacity:1} }
+
+@mixin add-blur-filter($blur: 5px) {
+    -webkit-filter: blur($blur);
+    -moz-filter: blur($blur);
+    -o-filter: blur($blur);
+    -ms-filter: blur($blur);
+    filter: blur($blur);
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        background: rgba(0, 0, 0, .3);
+    }
+}
+
+//hide ckeditor notification
+.cke_notifications_area {
+    display: none !important;
+}
+
+.disabled {
+    cursor: not-allowed !important;
+    &:hover {
+        cursor: not-allowed !important;
+    }
+}
+
+.input-disabled {
+    cursor: not-allowed !important;
+    pointer-events: none;
+    background-color: #ebebeb !important;
+    color: #ccc !important;
+}
+
+.avoid-click {
+    pointer-events: none;
+}
+
+.add-gray-scale {
+    filter: grayscale(1);
+    -webkit-filter: grayscale(1);
+    -moz-filter: grayscale(1);
+    -o-filter: grayscale(1);
+    -ms-filter: grayscale(1);
+}
+.add-gray-button-disabled {
+    button {
+        background: #999 !important;
+        background-color: #999 !important;
+    }
+    div {
+        background: #999 !important;
+        background-color: #999 !important;
+    }
+}
+
+.avoid-loading {
+    cursor: progress;
+}
+
+.border-rounded {
+    border-radius: 50%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.hide {
+    display: none !important;
+}
+
+.displayFlex {
+    display: flex;
+}

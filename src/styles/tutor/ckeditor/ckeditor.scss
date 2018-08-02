@@ -1,0 +1,228 @@
+@import '../../../stylesheets/variable';
+.cursor-away{
+  cursor: not-allowed !important;
+}
+//.cke_inner{
+//  padding-top: 0px !important;
+//}
+//.question-layer{
+//  td{
+//    padding-bottom: 10px !important;
+//  }
+//}
+//.passage-para{
+//  display: -webkit-flex;
+//  display: flex;
+//  float: left;
+//  width: 100%;
+//  .passage-box{
+//    flex: 1;
+//    -webkit-flex: 1;  /* Safari 6.1+ */
+//    -ms-flex: 1;
+//    min-width: 50%;
+//  }
+//  .passage-question-box{
+//    flex: 1;
+//    -webkit-flex: 1;  /* Safari 6.1+ */
+//    -ms-flex: 1;
+//    min-width: 50%;
+//  }
+//}
+//.passage-box{
+//  line-height: 25px;
+//  p{
+//    margin: 0px !important;
+//  }
+//}
+//.question-part,
+//.qp-para{
+//  line-height: 30px;
+//  font-size: 30px;
+//  p{
+//    margin: 0px !important;
+//  }
+//}
+//.passage-box .cke_wysiwyg_div{
+//  //line-height: 25px;
+//}
+//.question-part{
+//  padding-bottom: 20px;
+//  .q-title{
+//    line-height: 30px;
+//  }
+//  .q-para{
+//    padding-bottom: 2px;
+//    line-height: 30px;
+//  }
+//   td{
+//    line-height: 30px !important;
+//  }
+//}
+//.question-part  .cke_wysiwyg_div{
+//  line-height: 30px;
+//
+//  p{
+//    margin:0px !important;
+//    padding: 0px !important;
+//  }
+//}
+//div.cke_wysiwyg_div {
+//  transition: 200ms ease-in;
+//  border-bottom: 1px dotted #fff;
+//  overflow: hidden;
+//  line-height: 28px;
+//  p{
+//    margin-bottom: 0px !important;
+//    padding: 0px !important;
+//  }
+//  &:hover {
+//    border-bottom: 1px dotted #ccc !important;
+//  }
+//  &:focus {
+//    //border-bottom: none;
+//    border-bottom: 1px dotted #fff;
+//  }
+//}
+//.cke_voice_label{
+//  display: none !important;
+//}
+//.cke_bottom{
+//  //display: none !important;
+//}
+//.cke_editor_questionNameId{
+//  width: 100% !important;
+//}
+//.cke_wysiwyg_div{
+//	//height: 20px;
+//  overflow-wrap: break-word;
+//  word-wrap: break-word;
+//
+//  -ms-word-break: break-all;
+//  /* This is the dangerous one in WebKit, as it breaks things wherever */
+//  word-break: break-all;
+//  /* Instead use this non-standard one: */
+//  word-break: break-word;
+//
+//  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+//  -ms-hyphens: auto;
+//  -moz-hyphens: auto;
+//  -webkit-hyphens: auto;
+//  hyphens: auto;
+//}
+//
+//.cke_editor_explanationId{
+//	width: 100% !important;
+//}
+//.cke_chrome{
+//    display: none !important;
+//}
+//
+
+.cke_chrome {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.cke_inner{
+  padding-top: 0 !important;
+}
+
+.cke_contents {
+  //margin-bottom: 8px;
+}
+
+div.cke_wysiwyg_div {
+  transition: 200ms ease-in;
+  border-bottom: 1px dotted #fff;
+  overflow: hidden;
+  line-height: 28px;
+  p{
+    margin-bottom: 0px !important;
+    padding: 0px !important;
+  }
+  &:hover {
+    border-bottom: 1px dotted #ccc !important;
+  }
+  &:focus {
+    //border-bottom: none;
+    border-bottom: 1px dotted #fff;
+  }
+}
+
+.cke_wysiwyg_div{
+  padding: 0 !important;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  -ms-word-break: break-all;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all;
+  /* Instead use this non-standard one: */
+  word-break: break-word;
+
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.cke_wysiwyg_frame {
+  border-bottom: 1px solid #47a8bf !important;
+  padding-bottom: 5px;
+}
+
+// editor style here
+.text-manager-cke-body {
+  margin: 10px !important;
+}
+
+.cke_bottom {
+  box-shadow: none !important;
+  padding: 2px !important;
+  border: none;
+  background: #ccc none !important;
+}
+
+.cke_path {
+  display: none !important;
+}
+
+.cke_toolbox {
+  border-radius: 0 !important;
+}
+
+.cke_toolbar {
+  float: none;
+  .cke_toolgroup {
+    margin: 0;
+    border-radius: 0;
+    background: none !important;
+    border: none;
+    box-shadow: none !important;
+
+    .cke_button {
+      border-radius: 0;
+      cursor: pointer;
+      margin: 1px;
+      &:hover {
+        //background: none;
+        //@include material-box-shadow(1);
+      }
+    }
+    .cke_button:first-child, .cke_button:last-child{
+      border-radius: 0 !important;
+    }
+
+    .cke_button_disabled {
+      cursor: not-allowed;
+    }
+
+    .cke_button_on {
+      box-shadow: none !important;
+    }
+  }
+}
+.cke_editable {
+  background-color: #00b0ff;
+}

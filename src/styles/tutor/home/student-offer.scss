@@ -1,0 +1,108 @@
+@import '../../../stylesheets/variable';
+
+.student-wait-offer {
+  z-index: 20;
+  position: relative;
+  padding-bottom: 10px;
+  @media screen and (min-width: 768px) {
+    width: 100%;
+  }
+
+  .student-offer-card {
+    display: block;
+    float: left;
+    //height: 90px;
+    margin: 10px 10px 5px;
+    .student-offer-card-block {
+      height: 90px;
+      width: 377px;
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+      .student-offer-card-block-content {
+        border: 1px solid #ebebeb;
+        padding: 10px 10px 16px 93px !important;
+        -webkit-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
+        -moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
+        box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
+      }
+    }
+  }
+  .offer-card-primary-text {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .offer-card-secondary-text {
+    font-size: 10px;
+    color: #999999;
+    position: relative;
+    top: 1px;
+  }
+  .create-offer-btn {
+    height: 30px;
+    width: 100%;
+    position: relative;
+    top: 5px;
+  }
+  .create-offer-btn {
+    button {
+      height: 30px !important;
+      border-radius: 0 !important;
+      line-height: 30px !important;
+    }
+  }
+}
+
+.student-detail-wrap{
+  .right-para{
+    background-color: #fff !important;
+    .btn-filter {
+      @media screen and (max-width: 767px) {
+        margin-right: 4px !important;
+      }
+    }
+  }
+}
+
+.student-detail-sidebar{
+  .side-bar-price{
+    font-weight: bold;
+    font-size: 18px;
+    padding-bottom: 5px;
+    .price-text{
+      color: #1da41d;
+    }
+  }
+}
+
+.student-detail-icon{
+  display: inline-block;
+}
+
+.student-detail-header{
+  font-weight: bold;
+  display: inline-block;
+  font-size: 20px;
+  position: relative;
+  bottom: 5px;
+  padding-left: 10px;
+}
+
+.loading{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 100;
+  //background: rgba(0,0,0,0.2);
+  text-align: center;
+  vertical-align: middle;
+  .spinner {
+    margin-top: calc(40vh - 65px);
+  }
+  /*@media screen and (max-width: 767px) {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+  }*/
+}

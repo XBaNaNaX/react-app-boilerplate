@@ -1,0 +1,63 @@
+.checkbox-free {
+  padding-top: 45px !important;
+
+  @media screen and (max-width: 767px) {
+    padding-top: 30px !important;
+    padding-bottom: 5px !important;
+  }
+
+}
+
+.edit-banner-block {
+  cursor: pointer;
+}
+
+.edit-banner-wrapper {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  padding-top: 50px;
+}
+
+.edit-banner-icon {
+  display: inline-block;
+  position: relative;
+  top: 4px;
+  padding-right: 6px;
+}
+
+.edit-banner-label {
+  display: inline-block;
+}
+
+.left-panel-thumbnail{
+  width: 100% !important;
+  height: 100% !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+.left-panel-detail {
+  cursor: pointer;
+  text-align: center !important;
+  background-color: #f1f1f1 !important;
+  border: 1px solid #ccc !important;
+}
+
+.upload-block {
+  width: 100%;
+  //height: 100%;
+  padding-top: 35px;
+}
+
+.image-icon {
+  display: block !important;
+  font-size: 60px !important;
+  color: #a8a8a8;
+}
+
+.image-label {
+  display: block !important;
+  color: #999;
+}

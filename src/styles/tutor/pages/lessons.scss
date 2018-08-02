@@ -1,0 +1,94 @@
+@import "../_common/asset-commons";
+
+.checkbox-lesson-free{
+  @extend .checkbox-free;
+}
+
+.lesson-banner-block{
+  @extend .edit-banner-block;
+
+  .lesson-banner-wrapper{
+    @extend .edit-banner-wrapper;
+
+    .lesson-banner-icon{
+      @extend .edit-banner-icon;
+    }
+    .lesson-banner-label{
+      @extend .edit-banner-label;
+    }
+  }
+}
+
+.LessonPreview {
+  .pdf-loading {
+    position: absolute;
+    top: 0;
+    left: 0 !important;
+    height: 100%;
+    z-index: 999;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+  }
+  #pdftoolbar {
+    .pdf-btn {
+      min-width: 65px !important;
+      border-radius: 0 !important;
+    }
+    @media screen and (min-width: 1200px) {
+    }
+    @media screen and (max-width: 1199px) and (min-width: 768px) {
+    }
+    @media screen and (max-width: 767px) {
+      transform: scale(0.62,0.62);
+      position: relative;
+      top: -40px;
+      right: -55px;
+    }
+  }
+  .pdfCurrentPage {
+    width: 50px !important;
+    border: 1px solid #CCCCCC !important;
+    border-radius: 3px;
+    height: 30px !important;
+    padding-left: 12px !important;
+    padding-right: 4px !important;
+    input {
+      text-align: center;
+    }
+  }
+  .pdfTotalPage {
+
+  }
+  #panel {
+    //border:1px solid #CCCCCC;
+    width: 100%;
+    display: block;
+    text-align: center;
+    @media screen and (min-width: 1200px) {
+      height: 297mm;
+    }
+    @media screen and (max-width: 1199px) and (min-width: 768px) {
+      height: 207mm;
+    }
+    @media screen and (max-width: 767px) {
+      height: 137mm;
+
+    }
+  }
+
+  //.preview-content {
+  //  .thumbnail-part {
+  //
+  //  }
+  //  .pdf-part {
+  //    padding: 20px;
+  //    background-color: #ffffff;
+  //    #panel {
+  //      border:1px solid #CCCCCC;
+  //      width: 100%;
+  //      display: block;
+  //      text-align: center;
+  //    }
+  //  }
+  //}
+}

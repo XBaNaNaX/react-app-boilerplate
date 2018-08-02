@@ -1,0 +1,454 @@
+@import '../../../stylesheets/variable';
+
+.ProspectsViewResultLayout {
+  .cover-view-result {
+    display: block;
+    height:180px;
+    width: 100%;
+    margin-top: -30px;
+    margin-bottom: 30px;
+
+    background-color: #efefef;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    &:after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      display: block;
+      background: rgba(0, 0, 0, .6);
+    }
+  }
+  .home-right-content {
+    @include material-box-shadow(1);
+  }
+
+  .ProspectContainer {
+    height: 230px !important;
+  }
+  .ProspectGridMode {
+    height:100% !important;
+  }
+
+  .ProspectsLayout {
+    .ProspectGridMode {
+      .prospect-offer-card-grid-block {
+        border:none !important;
+        box-shadow: none !important;
+      }
+    }
+  }
+  .ProspectOfferCard {
+    margin: 0 !important;
+    background-color: #fff !important;
+    height: 100% !important;
+    .prospect-offer-card-grid-block {
+      border:none !important;
+      box-shadow: none !important;
+      .card-btn {
+        position: relative !important;
+        height: 50px !important;
+        button {
+          height: 50px !important;
+          > div > div {
+            height: 50px !important;
+            span {
+              top: 8px;
+            }
+          }
+        }
+      }
+      .prospect-offer-card-grid-correct-text {
+        font-size: 14px !important;
+        font-weight: 400 !important;
+        margin-bottom: 6px;
+        margin-top: -2px;
+      }
+    }
+  }
+  .right-para{
+    @media screen and (max-width: 1199px) {
+      background-color: none !important;
+    }
+  }
+  .student-detail {
+    @include add-fade-in();
+    .student-avatar {
+      border: 2px solid #FFF;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .student-name {
+      width: 100%;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      font-size: 22px;
+      font-weight: $font-bold;
+    }
+    .student-result {
+      height:32px;
+      width: 120px;
+      font-weight: $font-bold;
+      color: #ffffff;
+      text-align: center;
+      margin-bottom: 18px;
+      span {
+        position: relative;
+        top:8px;
+      }
+    }
+    .student-pre-test {
+      width: 260px;
+      //white-space: pre;
+      //text-overflow: ellipsis;
+      //overflow: hidden;
+      //font-size: 14px;
+      //font-weight: 500;
+      margin-top: 12px;
+      font-size: 16px;
+      font-weight: 400;
+      margin-bottom: 12px;
+    }
+    .student-correct {
+      font-size: 14px;
+      margin-top: 3px;
+      margin-bottom: 3px;
+    }
+    .student-taken {
+      color: #AAAAAA;
+      font-size: 12px;
+    }
+  }
+  .offer-bar {
+    height: 50px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    //@include material-box-shadow(1);
+    .bar-text-gray {
+      color: $clr-gray;
+      font-size: 18px;
+      position: relative;
+      top: 6px;
+      &.next {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+    .bar-text-blue {
+      color: $clr-dark-blue2;
+      font-size: 18px;
+      position: relative;
+      top: 6px;
+    }
+  }
+  .view-mode {
+    float: right;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    .create-offer-btn {
+      border-radius: 0 !important;
+      @include material-box-shadow(1);
+      span {
+        text-transform: none !important;
+      }
+
+    }
+  }
+
+  //question
+  .ProspectQuestionCard {
+    padding: 10px 20px;
+    @include add-fade-in();
+    .offer-question-card:last-child {
+      margin-bottom: 0 !important;
+    }
+    .offer-question-card {
+      .question-card-title {
+        font-weight: $font-bold;
+        font-size: 18px;
+        margin-bottom: 10px;
+        display: inline-block;
+        width: 100%;
+        .question-index {
+          margin-right: 10px;
+          float: left;
+        }
+        .question-title {
+
+        }
+      }
+      .question-card-choice {
+        font-size: 16px;
+        padding-left: 20px;
+        margin-bottom: 20px;
+        display: inline-block;
+        width: 100%;
+        line-height: 24px;
+        .choice-icon {
+          //color: #EE0000;
+          margin-right: 10px;
+          float: left;
+        }
+        .choice-title {
+          position: relative;
+          //bottom: 6px;
+          display: inline-block;
+        }
+      }
+      .question-card-explanation {
+        padding-top: 15px;
+        border-top: 1px solid #cccccc;
+        color: #999;
+        font-size: 16px;
+        margin-bottom: 10px;
+        .explanation-title {
+
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .ProspectsViewResultLayout {
+    .student-detail-medium {
+      padding: 0 !important;
+      margin-top: -30px;
+
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100% 100%;
+      background-size: cover;
+
+      @include material-box-shadow(1);
+      .student-detail-medium-body {
+        //padding: 20px 16px 43px 196px !important;
+        //height: 180px;
+        //padding: 20px 16px 0 196px !important;
+        background-color: rgba(0,0,0,0.6) !important;
+        padding-top: 18px;
+        padding-bottom: 18px;
+        height: 144px;
+      }
+      .create-offer-btn {
+        margin-top: 20px !important;
+      }
+      .student-avatar-img {
+        border: 2px solid #FFF;
+        @include material-box-shadow(1);
+        width: 100px;
+        height: 100px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .student-name {
+        color: #fff !important;
+        font-size: 16px;
+        text-align: center;
+      }
+      .student-result {
+        margin-top: 5px;
+        margin-bottom: 3px;
+        color: #fff !important;
+        span {
+        }
+      }
+      .student-pre-test {
+        width: auto;
+        color: #fff !important;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 300;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+      .student-correct {
+      }
+      .student-taken {
+        width: auto;
+        color: #fff !important;
+        text-align: center;
+        font-size: 12px;
+        font-weight: 300;
+      }
+    }
+
+    .create-offer-sm {
+      border-radius: 0 !important;
+      z-index: 500;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      position: fixed;
+      button {
+        border-radius: 0 !important;
+        width: 100% !important;
+        height: 50px !important;
+        font-size: 18px !important;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .ProspectsViewResultLayout {
+    /*.student-detail-sm {
+      margin-bottom: 10px !important;
+    }*/
+    .offer-question-card {
+      margin-bottom: 10px !important;
+    }
+    /*.student-detail-medium {
+      padding: 0 !important;
+      margin-top: 0;
+
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100% 100%;
+      .student-detail-medium-body {
+        //padding: 10px 16px 20px 154px !important;
+        //height: 124px;
+        background-color: rgba(0,0,0,0.6) !important;
+        padding-top: 18px;
+        padding-bottom: 18px;
+        //float:left;
+      }
+      .student-avatar-img {
+        border: 2px solid #FFF;
+        @include material-box-shadow(1);
+        //margin-top: 8px;
+        //width: 120px;
+        //height: 120px;
+        width: 64px;
+        height: 64px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .student-avatar {
+      }
+      .student-name {
+        color: #fff !important;
+        font-size: 16px;
+        text-align: center;
+      }
+      .student-result {
+        margin-top: 5px;
+        margin-bottom: 3px;
+        color: #fff !important;
+        span {
+        }
+      }
+      .student-pre-test {
+        width: auto;
+        color: #fff !important;
+        text-align: center;
+        font-size: 12px;
+        font-weight: 300;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+      .student-correct {
+      }
+      .student-taken {
+        width: auto;
+        color: #fff !important;
+        text-align: center;
+        font-size: 12px;
+        font-weight: 300;
+      }
+    }*/
+    .create-offer-btn {
+      margin-top: 10px !important;
+    }
+    .create-offer-sm {
+      border-radius: 0 !important;
+      z-index: 500;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      position: fixed;
+      button {
+        border-radius: 0 !important;
+        width: 100% !important;
+        height: 50px !important;
+        font-size: 18px !important;
+      }
+    }
+    .question-card-choice {
+      padding-left: 0 !important;
+      margin-left: -5px !important;
+    }
+    .student-detail-medium{
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .student-detail-medium-body {
+        background-color: rgba(0,0,0,0.6) !important;
+        padding-top: 18px;
+        padding-bottom: 18px;
+        height: 144px;
+      }
+      .student-avatar-img {
+        border: 2px solid #FFF;
+        @include material-box-shadow(1);
+        width: 100px;
+        height: 100px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .student-name {
+        color: #fff !important;
+        font-size: 16px !important;
+        text-align: center;
+      }
+      .student-result {
+        margin-top: 5px;
+        margin-bottom: 3px;
+        color: #fff !important;
+        span {
+        }
+      }
+      .student-pre-test {
+        width: auto;
+        color: #fff !important;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 300;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+      .student-correct {
+      }
+      .student-taken {
+        width: auto;
+        color: #fff !important;
+        text-align: center;
+        font-size: 12px;
+        font-weight: 300;
+      }
+  }
+}

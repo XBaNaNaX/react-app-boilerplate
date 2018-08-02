@@ -1,0 +1,370 @@
+@import '../../../stylesheets/variable';
+
+$bg_url: '/img/BG.png';
+.header-icon{
+  /*@media screen and (max-width: 767px) {
+    display: none !important;
+  }*/
+}
+.bank-select{
+  @media screen and (min-width: 1200px) {
+    width: 775px;
+  }
+   @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 682px;
+  }
+}
+.user-profile {
+  .right-box{
+    background: transparent !important;
+  }
+  .home-right-header{
+    @media screen and (max-width: 767px){
+      padding: 10px 0px 10px 20px !important;
+      /*.header-icon ,
+      .material-icons{
+        display: none !important;
+      }*/
+    }
+    
+  }
+  .BankAccountTypeRadio{
+    @media screen and (max-width: 767px) {
+      display: block !important;
+    }
+  }
+  .radio-bank{
+    @media screen and (max-width: 767px) {
+      width: 100% !important;
+      &:first-child{
+        margin-bottom: 15px !important;
+      }
+    }
+  }
+  //file upload style
+  .upload-image {
+    display: none;
+  }
+  .user-profile-avatar {
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 0;
+    .user-profile-avatar-content {
+      height: 180px;
+      background-image: url($bg_url);
+      background-size: auto 500px;
+      .profile-avatar {
+        padding-top: 20px;
+        position: relative;
+        //cursor: pointer;
+        .profile-avatar-icon {
+          width: 90px;
+          height: 90px;
+          display: inline-block;
+          border-radius: 90px;
+          border: 1px solid #fff;
+          .avatar-icon {
+            color: #ebebeb !important;
+            right: 6px;
+            top: -6px;
+          }
+          .avatar-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            //border: 1px solid #CCC;
+          }
+        }
+      }
+    }
+    .edit-avatar {
+      display: inline-block;
+      position: absolute;
+      z-index: 10;
+      margin-left: -30px;
+      .edit-avatar-button {
+        background-color: #fafafa !important;
+        border-radius: 50px;
+        width: 30px !important;
+        height: 30px !important;
+      }
+    }
+    .user-profile-display-name {
+      .display-name {
+        font-size: 24px;
+        color: #fff;
+        font-weight: 400;
+      }
+      .display-account-type {
+        font-size: 16px;
+        color: #fff;
+        margin-top: 5px;
+        font-weight: 300;
+      }
+    }
+  }
+  .home-right-content {
+    margin-bottom: 20px;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 10px !important;
+    }
+  }
+  .user-profile-tab-menu {
+    cursor: pointer;
+    height: 50px;
+    background-color: #FFFFFF;
+    padding-left: 25%;
+    padding-right: 25%;
+    text-align: center;
+    @include material-box-shadow(1);
+    .col {
+      height: 100%;
+    }
+    .user-profile-tab {
+      //height: 100%;
+      font-weight: $font-bold;
+      color: #cccccc;
+      height: 50px;
+      .material-icons {
+        color: #cccccc !important;
+      }
+      &.active {
+        color: #000;
+        .user-profile-menu {
+          margin-top: 10px;
+        }
+        .material-icons {
+          color: #000 !important;
+        }
+      }
+    }
+    .active-tab-menu {
+      height: 5px;
+      position: relative;
+      top: 47px;
+      width: 100%;
+      background-color: $clr-dark-blue;
+      opacity: 0; /* make things invisible upon start */
+      -webkit-animation: fadeInLeftToRight ease-in 0.2s; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+      -moz-animation: fadeInLeftToRight ease-in 0.2s;
+      animation: fadeInLeftToRight ease-in 0.2s;
+
+      -webkit-animation-fill-mode: forwards; /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+      -moz-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+
+      -webkit-animation-duration: 0.15s;
+      -moz-animation-duration: 0.15s;
+      animation-duration: 0.15s;
+    }
+    .user-profile-menu {
+      margin-top: 14px;
+    }
+  }
+  .user-profile-logout-button {
+    button {
+      line-height: 50px !important;
+    }
+  }
+}
+
+//Manage Sign In
+.ManageYourSignIn {
+  //padding-left: 10px;
+  //padding-right: 25px;
+  padding-top: 10px !important;
+  .ManageEmail,.ManageFacebook ,.ManageGoogle {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .connect-social {
+    height: 32px;
+    display: block;
+    border-bottom: 1px solid #E0E0E0;
+    .button-wrapper {
+      float: right;
+    }
+    .col {
+      padding: 0;
+    }
+    .social-account-name {
+      position: relative;
+      top: 5px;
+      float: left;
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    button {
+      line-height: 26px !important;
+      width: 70px !important;
+      border-radius: 0 !important;
+      min-width: 70px !important;
+      height: 26px !important;
+    }
+    .manage-test {
+      float: right;
+      width: auto !important;
+      min-width: auto !important;
+      .material-icons{
+        float: right;
+      }
+    }
+  }
+}
+.ChangePasswordForm{
+  margin-bottom: 40px;
+}
+//start BasicInformation tab
+.BasicInformation {
+  //padding-left: 30px;
+  //padding-right: 45px;
+  padding-top: 10px !important;
+  padding-bottom: 20px !important;
+}
+
+//start work tab
+.WorkExperience {
+ // padding-left: 30px;
+ // padding-right: 45px;
+ padding-top: 10px !important;
+ padding-bottom: 20px !important;
+  .YearExperience {
+    > div {
+      width: 50% !important;
+    }
+  }
+  .DescExperience {
+    margin-bottom: 10px;
+  }
+}
+
+//start EducationBackground tab
+.EducationBackground {
+  padding-bottom: 20px !important;
+  padding-top: 10px !important;
+ // padding-left: 30px;
+ // padding-right: 45px;
+}
+
+//start BankAccount
+.BankAccount {
+  padding-bottom: 20px !important;
+  padding-top: 10px !important;
+ // padding-left: 30px;
+ // padding-right: 45px;
+  .BankAccountType {
+    .BankAccountTypeRadio {
+      padding-top: 20px;
+    }
+  }
+}
+.dialog-password {
+  .modal-title{
+    width: 90%;
+    float: left;
+    margin: 10px auto 0px auto !important;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .edit-avatar {
+    //top: 76px !important;
+  }
+  .user-profile-content {
+    .left-box {
+      float: left;
+      width: 100%;
+      margin-bottom: 0px;
+    }
+    .right-box{
+      float: left;
+    }
+    &.row{
+      margin-bottom: 10px !important;
+    }
+  }
+  .user-profile-tab-menu {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    .col {
+      padding: 0 !important;
+    }
+  }
+  .user-profile-tab {
+    padding: 0 !important;
+  }
+  //start work tab
+  .WorkExperience {
+    .YearExperience {
+      > div {
+        width: 100% !important;
+      }
+    }
+  }
+  //start EducationBackground tab
+  .EducationBackground {
+    .row {
+      margin-bottom: 0;
+    }
+  }
+  .dialog-password{
+    width: 450px;
+    @media screen and (max-width: 767px){
+      width: 100% !important;
+      margin: auto 0 !important;
+    }
+  }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .user-profile-content {
+    .left-box {
+      margin-bottom: 20px;
+    }
+  }
+  .user-profile-tab-menu {
+    padding-left: 12.5% !important;
+    padding-right: 12.5% !important;
+  }
+  //start work tab
+  .WorkExperience {
+    .YearExperience {
+      > div {
+        width: 100% !important;
+      }
+    }
+  }
+  //start EducationBackground tab
+  .EducationBackground {
+    .row {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .user-profile-content {
+    .left-box {
+      float: right;
+    }
+    .right-box{
+      float: right;
+      margin-left: 30px;
+    }
+  }
+  .EducationFacilities {
+    padding-left: 20px !important;
+  }
+  .EducationDegree {
+    padding-right: 20px !important;
+  }
+  .EducationMajor {
+    padding-right: 20px !important;
+  }
+  .EducationGrade {
+    padding-left: 20px !important;
+  }
+}

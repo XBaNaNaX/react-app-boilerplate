@@ -1,0 +1,96 @@
+@import '../../../stylesheets/variable';
+
+.block-wrap{
+  position: relative;
+  //display: flex; // checkbox need
+  .alert-bar{
+    width: 10px;
+    position: absolute;
+    height: 100%;
+    left: 0;
+    background: rgb(214, 45, 32);
+    z-index: 33;
+    transition: 400ms ease-in;
+  }
+}
+.btn-more-ans{
+  padding: 5px 0px 0px 0px;
+  margin-bottom: 10px;
+  border: none !important;
+  background: transparent;
+  cursor: pointer;
+  width: 165px;
+  float: left;
+  color: $clr-dark-gray;
+  text-align: left;
+  line-height: 28px;
+  font-size: 15px;
+  &:hover,&:focus,&:active{
+    border: none !important;
+    outline: none !important;
+  }
+  .material-icons,
+  .add-more-icon{
+    font-size: 28px;
+    float: left;
+    margin-left: -1px;
+    margin-right: 12px;
+  }
+  .check-icon{
+    margin-left: -3px !important;
+    margin-right: 15px !important;
+  }
+  .add-more-text{
+    position: relative;
+    //bottom: 10px;
+    vertical-align: middle;
+  }
+}
+
+.btn-add-passage-question {
+  color: #aaa;
+  background-color: #ebebeb;
+  margin-left: 25px;
+  width: 95%;
+  border-radius: 2px;
+  padding-top: 3px;
+  i {
+    position: relative;
+    top: 2px;
+  }
+}
+
+//delete question part
+.block-wrap {
+  .selected-delete-question {
+    position: absolute;
+    background-color: #fff;
+    top: 28px;
+    z-index: 10;
+    left: 95.6%;
+    @media screen and (max-width: 1199px) and (min-width: 768px) {
+      left: 93% !important;
+    }
+    @media screen and (max-width: 767px) {
+      top: 12px !important;
+      left: 88% !important;
+    }
+  }
+  //adjust checkbox style
+  .testhero-checkbox {
+
+  }
+  .testhero-checkbox:before {
+
+  }
+  .testhero-checkbox:checked:before {
+    left:3px;
+  }
+  .testhero-checkbox:checked:after {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+  }
+  .testhero-checkbox:after {
+    background-color: #ffffff;
+  }
+}

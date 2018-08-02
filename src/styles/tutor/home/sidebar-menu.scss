@@ -1,0 +1,82 @@
+.home-side-bar-menu {
+  position: relative;
+  border: none;
+  outline:none;
+  cursor: pointer;
+  overflow:hidden;
+  width: 100%;
+  height: 100px;
+  margin-bottom: 10px;
+  background-color: #FFFFFF;
+  transition: box-shadow 200ms;
+  .ViewCursorRoot {
+    height: 0;
+    left: 0;
+    position: absolute;
+    width: 5px;
+    background-color: #46A8BF;
+    opacity:0;  /* make things invisible upon start */
+    -webkit-animation:fadeInTopToBot ease-in 0.5s;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation:fadeInTopToBot ease-in 0.5s;
+    animation:fadeInTopToBot ease-in 0.5s;
+
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+
+    -webkit-animation-duration:0.2s;
+    -moz-animation-duration:0.2s;
+    animation-duration:0.2s;
+  }
+
+  @-webkit-keyframes fadeInTopToBot { from { opacity:0;height: 0 } to { opacity:1; height: 100%} }
+  @-moz-keyframes fadeInTopToBot  { from { opacity:0;height: 0 } to { opacity:1; height: 100%} }
+  @keyframes fadeInTopToBot  { from { opacity:0;height: 0 } to { opacity:1; height: 100%} }
+
+  .side-bar-counter {
+    width: 72px;
+    display: table;
+    text-align: right;
+    float: left;
+    height: 100%;
+    padding-left: 20px;
+    padding-right: 10px;
+    margin: 15px 0 0;
+    .primary-counter {
+      font-size: 64px;
+      font-weight: 300;
+      line-height: 64px;
+      color: #46A8BF;
+    }
+  }
+  .group-text {
+    margin: 20px 0 0;
+    padding-left: 0 !important;
+    .primary-text {
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+    .secondary-text {
+      font-size: 10px;
+      color: #999;
+      //margin-bottom: 2px;
+      margin-bottom: 4px;
+    }
+    .tertiary-text {
+      font-size: 10px;
+      color: #009900;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+  }
+  &.active,&:hover {
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media screen and (min-width:768px) and (max-width: 1199px){
+  .group-text{
+    margin: 7px 0px 0px !important;
+  }
+}

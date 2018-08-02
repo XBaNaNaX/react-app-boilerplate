@@ -1,0 +1,156 @@
+@import '../../../stylesheets/variable';
+
+.fab-container {
+    @media only screen and (min-width: $small-screen) and (max-width: $medium-screen) {
+        right: calc((100% - 100%) / 2) !important;
+    }
+
+    @media only screen  and (max-width: $small-screen) {
+        right: calc((100% - 100%) / 2) !important;
+    }
+
+    bottom: 20px;
+    position: fixed;
+    right: calc((100% - 1199px) / 2);
+    z-index: 999;
+    .addNewQuestion {
+        background-color: #46A8BF;
+        i {
+            font-size: 32px;
+        }
+    }
+    .saveAllQuestion {
+        background-color: $clr-green;
+        i {
+            font-size: 25px;
+        }
+    }
+    .ocrMode {
+        background-color: $clr-dark-red;
+        i {
+            font-size: 25px;
+        }
+    }
+    .delMode {
+        background-color: #D62D20;
+        i {
+            font-size: 25px;
+        }
+    }
+    .delQuestion {
+        background-color: #D62D20;
+        i {
+            font-size: 32px;
+        }
+    }
+    .exitDelMode {
+        background-color: #9E9E9E;
+        i {
+            font-size: 25px;
+        }
+    }
+    .createExam {
+        background-color: $clr-dark-red;
+        i {
+            font-size: 32px;
+        }
+    }
+    .buttons {
+        z-index: 50;
+        box-shadow: 0px 5px 11px -2px rgba(0, 0, 0, 0.18),
+        0px 4px 12px -7px rgba(0, 0, 0, 0.15);
+        border-radius: 50%;
+        display: block;
+        width: 56px;
+        height: 56px;
+        margin: 15px auto 0;
+        position: relative;
+        -webkit-transition: all .2s ease-out;
+        transition: all .2s ease-out;
+        color: #fff;
+        font-size: 20px;
+        line-height: 20px;
+        vertical-align: middle;
+        padding: 6px;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        &:focus, &:active, &:hover {
+            box-shadow: 0 0 4px rgba(0, 0, 0, .14),
+            0 4px 8px rgba(0, 0, 0, .28);
+            outline: none !important;
+        }
+    }
+
+    .buttons:not(:last-child) {
+        width: 40px;
+        height: 40px;
+        margin: 20px auto 0;
+        opacity: 0;
+        -webkit-transform: translateY(50px);
+        -ms-transform: translateY(50px);
+        transform: translateY(50px);
+    }
+
+    .buttons:nth-last-child(1) {
+        -webkit-transition-delay: 25ms;
+        transition-delay: 25ms;
+        //background-image: url('http://cbwconline.com/IMG/Share.svg');
+        //background-size: contain;
+    }
+
+    .buttons:not(:last-child):nth-last-child(2) {
+        -webkit-transition-delay: 50ms;
+        transition-delay: 20ms;
+        //background-image: url('http://cbwconline.com/IMG/Facebook-Flat.png');
+        //background-size: contain;
+    }
+
+    .buttons:not(:last-child):nth-last-child(3) {
+        -webkit-transition-delay: 75ms;
+        transition-delay: 40ms;
+        //background-image: url('http://cbwconline.com/IMG/Twitter-Flat.png');
+        //background-size: contain;
+    }
+
+    .buttons:not(:last-child):nth-last-child(4) {
+        -webkit-transition-delay: 100ms;
+        transition-delay: 60ms;
+        //background-image: url('http://cbwconline.com/IMG/Google%20Plus.svg');
+        //background-size: contain;
+    }
+
+    /* Show tooltip content on hover */
+
+    [data-tooltip]:before {
+        bottom: 25%;
+        //font-family: $font-exam;
+        border-radius: 2px;
+        background: #585858;
+        color: #fff;
+        content: attr(data-tooltip);
+        font-size: 20px;
+        visibility: hidden;
+        opacity: 0;
+        padding: 5px 7px;
+        margin-left: 10px;
+        position: absolute;
+        left: 100%;
+        white-space: nowrap;
+    }
+
+    [data-tooltip]:hover:before,
+    [data-tooltip]:hover:after {
+        visibility: visible;
+        opacity: 1;
+    }
+    &:hover {
+        .buttons:not(:last-child) {
+            opacity: 1;
+            -webkit-transform: none;
+            -ms-transform: none;
+            transform: none;
+            margin: 15px auto 0;
+        }
+        /* Unessential styling for sliding up buttons at differnt speeds */
+    }
+}
+

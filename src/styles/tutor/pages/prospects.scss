@@ -1,0 +1,300 @@
+@import '../../../stylesheets/variable';
+
+.ProspectsLayout {
+  //@include tab-menu-styles();
+  margin-top: 30px;
+  @media screen and (min-width: 1200px){
+    .tab-menu {
+      padding-left: 40%;
+      padding-right: 40%;
+    }
+  }
+  .view-mode {
+    display: flex;
+    float: right;
+    align-items: center;
+    height: 100%;
+  }
+  .ProspectContainer {
+    padding-top: 10px;
+  }
+  .ProspectGridMode {
+    @include add-fade-in();
+    .ProspectOfferCard {
+      position: relative;
+      ////text-align: center;
+      height: 220px; // old 226px , 228px
+      margin-bottom: 12px;
+      margin-top: 12px;
+      .score {
+        position: absolute;
+        top: 10px;
+        right: 48px;
+        border: 1px solid #CCC;
+        border-radius: 50%;
+        font-size: 10px;
+        color: #fff;
+        height: 16px;
+        min-width: 14px;
+        padding: 4px 3px 0 3px;
+        text-align: center;
+        line-height: 12px;
+      }
+      .prospect-offer-card-grid-title-text {
+        font-weight: $font-bold;
+        font-size: 16px; // old 20px
+        color: #000;
+        margin-bottom: 5px;
+        white-space: nowrap;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .prospect-offer-card-grid-correct-text {
+        font-size: 12px;
+        color: #000;
+        font-weight: $font-bold;
+      }
+      .prospect-offer-card-grid-taken-text {
+        font-size: 12px;
+        color: #AAA;
+        margin-bottom: 10px;
+      }
+    }
+    .prospect-offer-card-grid-block {
+      text-align: center;
+      position: relative;
+      padding-top: 10px;
+      //height: 100%;
+      height: 210px;
+      cursor: pointer;
+      border: 1px solid rgba(204, 204, 204, 0.64);
+      @include material-box-shadow(1);
+      .col {
+        padding: 0 !important;
+      }
+      .card-btn {
+        border-radius: 0 !important;
+        border:none !important; //after feedback
+        margin-top: 2px; //after feedback
+        bottom: -1px !important;
+        button {
+          border-radius: 0 !important;
+          &:hover {
+            @include material-box-shadow(1);
+          }
+        }
+      }
+    }
+  }
+  .ProspectListMode {
+    .no-offer-btn {
+      button {
+        &:hover {
+          background: #fff !important;
+        }
+      }
+    }
+    @include add-fade-in();
+    .ProspectOfferCard {
+      padding-right: 20px;
+      .score {
+        position: absolute;
+        top: 10px;
+        left: 85px;
+        z-index: 10;
+        color: #fff;
+        border: 1px solid #fff;
+        border-radius: 50px;
+        font-size: 10px;
+        width: 20px;
+        height: 18px;
+        text-align: center;
+        padding-top: 2px;
+      }
+      .prospect-offer-card-list-title-text {
+        font-weight: $font-bold;
+        font-size: 20px;
+        color: #000;
+        margin-bottom: 8px;
+        margin-top: 2px;
+      }
+      .prospect-offer-card-list-correct-text {
+        font-size: 12px;
+        color: #000;
+      }
+      .prospect-offer-card-list-taken-text {
+        font-size: 12px;
+        color: #AAA;
+        margin-bottom: 16px; //old 5px
+      }
+    }
+    .prospect-offer-card-list-block {
+      cursor: pointer;
+      height: 115px;
+      .prospect-offer-card-list-content {
+        height: 120px;
+        padding: 10px 10px 16px 142px !important;
+        .col {
+          padding: 0 !important;
+        }
+      }
+      .card-btn {
+        border-radius: 0 !important;
+        &:hover {
+          @include material-box-shadow(1);
+        }
+
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .ProspectsLayout {
+    .row {
+      //width: 100%;
+    }
+    .ProspectGridMode {
+      .ProspectOfferCard {
+        .score {
+          //top: 15px !important;
+          //left: 100px !important;
+          right: 32px !important;
+        }
+        .prospect-offer-card-grid-title-text {
+          width: 130px;
+          display: inline-block;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: pre;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .ProspectsLayout {
+    margin-top: 0;
+  }
+  .ProspectOfferCard {
+    padding-right: 0 !important;
+  }
+  .ProspectContainer {
+    .col {
+      padding-right: 6px !important;
+      padding-left: 6px !important;
+    }
+  }
+  .ProspectGridMode {
+    .ProspectOfferCard {
+      //height: 200px !important;
+      height: 196px !important;
+      margin-bottom: 6px !important;
+      margin-top: 6px !important;
+      .score {
+        margin: 8px 60%;
+        top: auto !important;
+        right: auto !important;
+      }
+      .prospect-offer-card-grid-block{
+        height: 184px !important;
+      }
+      .prospect-offer-card-grid-title-text {
+        width: 130px;
+        display: inline-block;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: pre;
+
+        font-size: 16px !important; //old 18px
+        margin-bottom: 2px !important;
+      }
+      .prospect-offer-card-grid-correct-text {
+      }
+      .prospect-offer-card-grid-taken-text {
+      }
+
+    }
+    img {
+      height: 75px !important;
+      width: 75px !important;
+    }
+  }
+  .ProspectsLayout {
+    .ProspectListMode {
+      .score {
+        left: 66px !important;
+      }
+      .prospect-offer-card-list-block {
+        padding-bottom: 8px !important;
+        height: 90px !important;
+        .prospect-offer-card-list-content {
+          padding: 10px 10px 16px 102px !important;
+          height: 72px !important;
+          border-bottom: 1px solid #ebebeb;
+          .prospect-offer-card-list-title-text {
+            font-size: 16px !important;
+            margin-bottom: 0 !important; //old 5px
+            line-height: 21px;
+            @include add-text-overflow-ellipsis(184px)
+          }
+          .prospect-offer-card-list-correct-text {
+            display: none;
+            font-size: 10px !important;
+            @include add-text-overflow-ellipsis(184px)
+          }
+          .prospect-offer-card-list-taken-text {
+            margin-bottom: 5px !important;
+          }
+          .card-btn {
+            margin: 0 !important;
+            width: 45% !important;
+            button {
+              height: 30px !important;
+              line-height: 30px !important;
+              span {
+                padding: 0 !important;
+                font-size: 12px !important;
+              }
+            }
+          }
+          .create-offer-btn {
+            margin-right: 4% !important;
+            text-align: center;
+            span{
+              padding: 0px !important;
+            }
+          }
+          img {
+            height: 75px !important;
+            width: 75px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*==pretest==*/
+.pretest {
+  .more {
+    margin-right: -10px;
+  }
+}
+
+
+.no-offer-btn{
+    background: #fff !important;
+    &:hover{
+      background: #fff !important;
+    }
+    button {
+      &:hover{
+        background: #fff !important;
+      }
+    }
+  }

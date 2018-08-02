@@ -1,0 +1,44 @@
+.new-payments{
+	padding-bottom: 15px;
+	margin:10px 0px 10px 0px;
+
+	> div{
+		float: left;
+		font-size: 10px;
+
+		.bath{
+			font-size: 18px;
+			font-weight: bold;
+			color: #009900;
+			padding-bottom: 5px;
+		}
+
+		&:first-child{
+			padding-right: 10px;
+			> img {
+				display: block;
+			}
+		}
+
+		&:last-child{
+			> div > div {
+				padding-bottom: 5px;
+				max-height: 10px;
+
+				&:last-child{
+					padding-bottom: 0px;
+				}
+			}
+		}
+	}
+
+	&:last-child{
+		padding-bottom: 0px;
+	}
+
+	&:after{
+	    content: '';
+	    display: block;
+	    clear: both;
+	}
+}

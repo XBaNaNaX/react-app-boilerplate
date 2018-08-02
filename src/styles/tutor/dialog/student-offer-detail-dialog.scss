@@ -1,0 +1,239 @@
+@import '../../../stylesheets/variable';
+
+.dialog-student-offer-detail {
+  h3 {
+    //border-bottom: 1px solid #ccc !important;
+    @include material-box-shadow(1);
+    .lock-icon {
+      position: relative;
+      top: 2px;
+    }
+  }
+  .body-student-offer-detail {
+    padding: 0 !important;
+    .content-student-offer-detail {
+      padding: 0;
+      //border-bottom: 1px solid rgb(224, 224, 224);
+      //border-top: 1px solid rgb(224, 224, 224);
+      //background-color: #eee;
+      .offer-detail {
+        padding: 0 !important;
+        .offer-image {
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+          display: block;
+          width: 100%;
+          height: 141px;
+          border:1px solid rgb(224, 224, 224);
+          padding: 0 !important;
+          position: relative;
+          //@media screen and (min-width: 768px) and (max-width: 1199px){
+          //  width: 220px;
+          //}
+        }
+        .layer {
+          background-color: rgba(0, 0, 0, 0.5);
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 2;
+        }
+        .offer-detail-text {
+          color: #ffffff;
+          z-index: 3;
+          height: auto;
+          margin: 42px auto;
+          text-align: center;
+          position: relative;
+          .offer-for {
+            font-weight: $font-bold;
+            font-size: 20px;
+            margin-bottom: 8px;
+          }
+          .offer-summary {
+            font-weight: 200;
+            font-size: 14px;
+            .material-icons {
+              position: relative;
+              top: 6px;
+              right: 8px;
+            }
+          }
+          span {
+            margin-bottom: 3px;
+          }
+        }
+      }
+    }
+    .content-asset-detail {
+      padding: 0;
+      padding-bottom: 20px !important;
+      .asset-count {
+        line-height: 32px;
+        border-bottom: 1px solid rgb(224, 224, 224);
+        font-weight: 500;
+        padding: 0 0 0 15px;
+      }
+      .asset-block {
+        padding: 5px;
+        padding-left: 8px;
+        padding-right: 8px;
+        height: 30vh;
+        @media screen and (min-width: 768px){
+          overflow-y: scroll;
+        }
+        .exam-block {
+          margin-bottom: 0 !important;
+        }
+        //overflow-y: scroll;
+        .stu-block {
+          padding: 8px;
+          .type-sm {
+            margin-right: 10px;
+          }
+        }
+
+        .item-detail {
+          @include add-fade-in();
+          padding: 8px;
+          font-size: 14px;
+          font-weight: 300;
+          .item-label {
+            color: #aaaaaa;
+            margin-bottom: 10px;
+          }
+          .item-description {
+            margin-bottom: 20px;
+            color: #000000;
+            font-weight: 400;
+          }
+          .item-information {
+            p {
+              color: #000000;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+    .footer-student-offer-detail {
+      padding-top: 12px !important;
+      padding-bottom: 12px !important;
+      border-top: 1px solid rgb(224, 224, 224);
+      .col {
+        padding: 0 !important;
+      }
+      .left-footer {
+
+      }
+      .right-footer {
+        .re-offer {
+
+        }
+        .accept {
+          border: 1px solid #47a8bf !important;
+        }
+        .accepted {
+          border: 1px solid #aaa !important;
+          margin-right: 8px !important;
+        }
+        .accept-icon {
+          color: #47a8bf;
+          font-size: 20px;
+          bottom: 2px;
+          position: relative;
+        }
+        .accepted-icon {
+          color: #aaa;
+          font-size: 20px;
+          bottom: 2px;
+          position: relative;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px){
+
+  .dialog-student-offer-detail {
+    width: 100% !important;
+    transform: translate(0, 0) !important;
+    overflow-y: scroll;
+    height: 100%;
+    top:0;
+    padding-top: 0 !important;
+    > div {
+      height: 100%;
+      border-radius: 0px !important;
+    }
+    .body-student-offer-detail {
+      max-height: 83vh !important;
+      overflow-y: scroll !important;
+      .content-student-offer-detail {
+        padding: 0!important;
+        //padding-top: 12px !important;
+        .offer-detail {
+          .offer-image {
+            width: 100%;
+            height: 180px;
+          }
+          .offer-detail-text {
+            padding: 12px 12px 12px;
+            .col {
+              padding: 0;
+            }
+            span {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+      .content-asset-detail {
+        .asset-count {
+        }
+        .asset-block {
+          padding: 4px 6px;
+          padding-bottom: 4vh;
+          .stu-block {
+
+            .exam-block {
+              margin: 0 !important;
+            }
+          }
+        }
+      }
+      .footer-student-offer-detail {
+        padding: 6px !important;
+        background-color: #fff;
+        position: fixed;
+        bottom: 0;
+        .col {
+        }
+        .left-footer {
+
+        }
+        .right-footer {
+          .accept {
+
+          }
+          .accepted {
+
+          }
+          .accept-icon {
+
+          }
+          .accepted-icon {
+
+          }
+        }
+      }
+    }
+    .re-offer {
+      margin-left: 6% !important;
+    }
+  }
+}

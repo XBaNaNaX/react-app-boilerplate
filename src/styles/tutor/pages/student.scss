@@ -1,0 +1,156 @@
+@import '../../../stylesheets/variable';
+
+.left-header{
+	div{
+		float: left !important;
+		width: 100% !important;
+	}
+}
+.sutdent-detail-container{
+	float: left;
+	width: 100%;
+	padding: 0px !important;
+	position: relative;
+	z-index: 1;
+	.btn-addmore{
+		height: 31px;
+	    margin-top: 5px;
+	    margin-right: 15px;
+	    cursor: pointer;
+	    border-radius: 0px;
+	    width: 100px;
+	    padding: 3px;
+	    background: #F47920;
+	    border: 1px solid #F47920;
+	    line-height: 24px;
+	    vertical-align: middle;
+	    color: #fff;
+	    &:hover{
+	    	@include button-shadow();
+	    }
+	}
+}
+.student-detail-sidebar{
+	line-height: 24px;
+}
+.student-detail{
+	position: relative;
+	z-index: 1;
+}
+.offer-btn{
+	height: 50px !important;
+	font-size: 16px !important;
+	
+	@media screen and (max-width: 767px) {
+		position: fixed !important;
+		z-index: 100 !important;
+		bottom: 0px !important;
+		height: 50px !important;
+		span{
+			font-size: 18px !important;
+		}
+	}
+}
+
+.page-title-student{
+	font-size: 20px !important;
+	height: 30px !important;
+	margin: -3px 0px 16px 15px !important;
+}
+
+.banner-block{
+	width: 100%;
+	height: 180px;
+	//background: url(/img/BG.png) no-repeat;
+    background-position: center center;
+    background-color: rgba(0,0,0,0.5);
+	background-size: cover;
+	padding: 25px 0px 10px 0px !important;
+	position: relative;
+	float: left;
+	.banner-title{
+		font-size: 20px;
+		font-weight: bold;
+		color: #fff;
+		margin-top: 50px;
+		margin-bottom: 10px;
+	}
+	.banner-subtitle{
+		color: #fff;
+		i{
+			font-size: 18px;
+			margin-right: 5px;
+			vertical-align: middle;
+		}
+	}
+	.layer {
+	    background-color: rgba(0, 0, 0, 0.5);
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	    z-index: 2;
+	}
+	.detail{
+		position: relative;
+		z-index: 5;
+	}
+}
+
+.student-data-block{
+	width: 250px;
+	height: auto;
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+	z-index: 20;
+	
+	.student-image{
+		margin: 0 auto;
+		background-position: center center;
+		background-size: cover;	
+		background-repeat: no-repeat;
+		background-clip: padding-box;
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;
+		border: 2px solid #ebebeb;
+	}
+	.student-name{
+		font-size: 15px;
+		font-weight: bold;
+		margin-top: 10px;
+		color: #fff;
+	}
+}
+
+.student-detail-wrap {
+	.row:first-child {
+		margin-bottom: 10px !important;
+	}
+	.content-part {
+		@media screen and (max-width: 767px) {
+			padding-bottom: 8vh !important;
+		}
+	}
+	.bottom-block-sm {
+		.col.s12 {
+			padding-right: 8px !important;
+		}
+		.type {
+			margin-top: 2px !important;
+			padding: 1px !important;
+		}
+		.detail {
+			width: auto;
+			padding-right: 0 !important;
+			.title {
+				font-size: 11px !important;
+			}
+			.sub-title {
+
+			}
+		}
+	}
+}

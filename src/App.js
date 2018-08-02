@@ -31,33 +31,6 @@ class App extends Component {
                     exact path={routes.SIGN_UP}
                     component={()=> <SignUp />}
                 />
-                    <p>Redux Example</p>
-                    <button onClick={()=>{props.fetchData()}}>Load data</button>
-                    {
-                        props.appData.isFetching && <p>Loading</p>
-                    }
-
-                    {
-                        props.appData.data.length ? (
-                            props.appData.data.map((person, i) => {
-                              return <div key={i} >
-                                <p>Name: {person.name}</p>
-                                <p>Age: {person.age}</p>
-                              </div>
-                            })
-                          ) : null
-                    }
-
-                    {
-                        props.appData.unit.length ? (
-                            props.appData.unit.map((unit, i) => {
-                              return <div key={i} >
-                                <p>Name: {unit.name}</p>
-                                <p>Order: {unit.order}</p>
-                              </div>
-                            })
-                          ) : null
-                    }
                 </div>
             </Router>
         );

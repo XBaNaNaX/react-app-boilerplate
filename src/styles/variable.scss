@@ -305,6 +305,17 @@ $small-and-down: "only screen and (max-width : #{$small-screen})" !default;
 @-moz-keyframes fadeIn { from { opacity:0} to { opacity:1} }
 @keyframes fadeIn{ from { opacity:0} to { opacity:1} }
 
+@mixin background-gradient($color1:#66499c,$color2:#d875ff) {
+    background: $color1;
+    background: -moz-linear-gradient(left, $color1 0%, $color2 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, $color1), color-stop(100%, $color2));
+    background: -webkit-linear-gradient(left, $color1 0%, $color2 100%);
+    background: -o-linear-gradient(left, $color1 0%, $color2 100%);
+    background: -ms-linear-gradient(left, $color1 0%, $color2 100%);
+    background: linear-gradient(to right, $color1 0%, $color2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66499c', endColorstr='#d875ff', GradientType=1 );
+}
+
 @mixin add-blur-filter($blur: 5px) {
     -webkit-filter: blur($blur);
     -moz-filter: blur($blur);

@@ -1,9 +1,7 @@
 var express = require('express')
 var router = express.Router();
 
-var mongoose = require('mongoose');
-mongoose.connect('mongodb://admin:1q2w3e4r@ds161121.mlab.com:61121/inventory');
-var Unit = require('../../model/units');
+var Unit = require('../routes/connection').UnitModel;
 
 router.route('/units')
 

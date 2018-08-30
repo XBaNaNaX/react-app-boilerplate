@@ -1,0 +1,334 @@
+.App {
+  text-align: center; }
+
+.App-logo {
+  -webkit-animation: App-logo-spin infinite 20s linear;
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px; }
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white; }
+
+.App-intro {
+  font-size: large; }
+
+@-webkit-keyframes App-logo-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@keyframes App-logo-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+.textbox-wrapper input {
+  border: 1px solid green; }
+.clr-blue {
+  color: #46a8c1 !important; }
+
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@-moz-keyframes fadein {
+  /* Firefox */
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@-webkit-keyframes fadein {
+  /* Safari and Chrome */
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@-o-keyframes fadein {
+  /* Opera */
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@-webkit-keyframes fadeInLeftToRight {
+  from {
+    opacity: 0;
+    width: 0; }
+  to {
+    opacity: 1;
+    width: 100%; } }
+
+@-moz-keyframes fadeInLeftToRight {
+  from {
+    opacity: 0;
+    width: 0; }
+  to {
+    opacity: 1;
+    width: 100%; } }
+
+@keyframes fadeInLeftToRight {
+  from {
+    opacity: 0;
+    width: 0; }
+  to {
+    opacity: 1;
+    width: 100%; } }
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+.cke_notifications_area {
+  display: none !important; }
+
+.disabled {
+  cursor: not-allowed !important; }
+  .disabled:hover {
+    cursor: not-allowed !important; }
+
+.input-disabled {
+  cursor: not-allowed !important;
+  pointer-events: none;
+  background-color: #ebebeb !important;
+  color: #ccc !important; }
+
+.avoid-click {
+  pointer-events: none; }
+
+.add-gray-scale {
+  filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+  -moz-filter: grayscale(1);
+  -o-filter: grayscale(1);
+  -ms-filter: grayscale(1); }
+
+.add-gray-button-disabled button {
+  background: #999 !important;
+  background-color: #999 !important; }
+
+.add-gray-button-disabled div {
+  background: #999 !important;
+  background-color: #999 !important; }
+
+.avoid-loading {
+  cursor: progress; }
+
+.border-rounded {
+  border-radius: 50%; }
+
+.text-center {
+  text-align: center; }
+
+.text-right {
+  text-align: right; }
+
+.hide {
+  display: none !important; }
+
+.displayFlex {
+  display: flex; }
+
+.SignUp {
+  background-image: url(/static/media/create_account_bg.34213017.png);
+  background-size: cover;
+  height: calc(100vh - 64px); }
+  @media screen and (max-width: 767px) {
+    .SignUp {
+      height: calc(100vh - 54px); } }
+  .SignUp .sign-up-wrapper {
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    height: 100%; }
+    @media screen and (max-width: 1199px) and (min-width: 768px) {
+      .SignUp .sign-up-wrapper {
+        -ms-flex-direction: column;
+        flex-direction: column; } }
+    @media screen and (max-width: 767px) {
+      .SignUp .sign-up-wrapper {
+        -ms-flex-direction: column;
+        flex-direction: column; } }
+    .SignUp .sign-up-wrapper .student-block {
+      text-align: center;
+      background-color: rgba(244, 121, 32, 0.6);
+      width: 50%; }
+      @media screen and (min-width: 1200px) {
+        .SignUp .sign-up-wrapper .student-block {
+          -ms-flex: 1 1;
+          flex: 1 1;
+          -ms-flex-align: stretch;
+          align-items: stretch; } }
+      @media screen and (max-width: 1199px) and (min-width: 768px) {
+        .SignUp .sign-up-wrapper .student-block {
+          -ms-flex: 1 1;
+          flex: 1 1;
+          -ms-flex-align: stretch;
+          align-items: stretch;
+          width: 100%;
+          height: 50%; } }
+      @media screen and (max-width: 767px) {
+        .SignUp .sign-up-wrapper .student-block {
+          width: 100%;
+          height: 50%; } }
+    .SignUp .sign-up-wrapper .tutor-block {
+      text-align: center;
+      background-color: rgba(250, 250, 250, 0.6);
+      width: 50%; }
+      @media screen and (min-width: 1200px) {
+        .SignUp .sign-up-wrapper .tutor-block {
+          -ms-flex: 1 1;
+          flex: 1 1;
+          -ms-flex-align: stretch;
+          align-items: stretch; } }
+      @media screen and (max-width: 1199px) and (min-width: 768px) {
+        .SignUp .sign-up-wrapper .tutor-block {
+          -ms-flex: 1 1;
+          flex: 1 1;
+          -ms-flex-align: stretch;
+          align-items: stretch;
+          width: 100%;
+          height: 50%; } }
+      @media screen and (max-width: 767px) {
+        .SignUp .sign-up-wrapper .tutor-block {
+          width: 100%;
+          height: 50%; } }
+  .SignUp .student-content {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .SignUp .student-content .student-avatar {
+      background-image: url(/static/media/student.c64d266b.png);
+      background-size: 200px;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 200px;
+      margin-top: 10em;
+      margin-bottom: 2em; }
+      @media screen and (max-width: 1199px) and (min-width: 768px) {
+        .SignUp .student-content .student-avatar {
+          margin-top: 30px; } }
+      @media screen and (max-width: 767px) {
+        .SignUp .student-content .student-avatar {
+          margin-bottom: 15px;
+          margin-top: 20px;
+          background-size: 100px;
+          height: 100px; } }
+    .SignUp .student-content .student-text {
+      font-size: 36px;
+      margin-bottom: 15px;
+      color: #ffffff; }
+      @media screen and (max-width: 767px) {
+        .SignUp .student-content .student-text {
+          font-size: 20px; } }
+    .SignUp .student-content .btn-wrapper .btn-sign-up-student {
+      cursor: pointer;
+      height: 50px;
+      width: 300px;
+      outline: none;
+      color: #fff;
+      border: 1px solid #fff;
+      background-color: rgba(250, 250, 250, 0.2);
+      -webkit-transition: 100ms;
+      -o-transition: 100ms;
+      transition: 100ms; }
+      @media screen and (max-width: 767px) {
+        .SignUp .student-content .btn-wrapper .btn-sign-up-student {
+          width: 240px;
+          height: 42px; } }
+      .SignUp .student-content .btn-wrapper .btn-sign-up-student span {
+        font-size: 18px; }
+        @media screen and (max-width: 767px) {
+          .SignUp .student-content .btn-wrapper .btn-sign-up-student span {
+            font-size: 16px; } }
+      .SignUp .student-content .btn-wrapper .btn-sign-up-student:hover {
+        -webkit-box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px !important;
+        -moz-box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px !important;
+        box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px !important; }
+  .SignUp .tutor-content {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .SignUp .tutor-content .tutor-avatar {
+      background-image: url(/static/media/tutor.f9d7b0ad.png);
+      background-size: 200px;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 200px;
+      margin-top: 10em;
+      margin-bottom: 2em; }
+      @media screen and (max-width: 1199px) and (min-width: 768px) {
+        .SignUp .tutor-content .tutor-avatar {
+          margin-top: 30px; } }
+      @media screen and (max-width: 767px) {
+        .SignUp .tutor-content .tutor-avatar {
+          margin-bottom: 15px;
+          margin-top: 20px;
+          background-size: 100px;
+          height: 100px; } }
+    .SignUp .tutor-content .tutor-text {
+      font-size: 36px;
+      margin-bottom: 15px; }
+      @media screen and (max-width: 767px) {
+        .SignUp .tutor-content .tutor-text {
+          font-size: 20px; } }
+    .SignUp .tutor-content .btn-wrapper .btn-sign-up-tutor {
+      cursor: pointer;
+      height: 50px;
+      width: 300px;
+      outline: none;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      -webkit-transition: 100ms;
+      -o-transition: 100ms;
+      transition: 100ms; }
+      @media screen and (max-width: 767px) {
+        .SignUp .tutor-content .btn-wrapper .btn-sign-up-tutor {
+          width: 240px;
+          height: 42px; } }
+      .SignUp .tutor-content .btn-wrapper .btn-sign-up-tutor span {
+        font-size: 18px; }
+        @media screen and (max-width: 767px) {
+          .SignUp .tutor-content .btn-wrapper .btn-sign-up-tutor span {
+            font-size: 16px; } }
+      .SignUp .tutor-content .btn-wrapper .btn-sign-up-tutor:hover {
+        -webkit-box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px !important;
+        -moz-box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px !important;
+        box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px !important; }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif; }
+
+/*# sourceMappingURL=main.151174e9.css.map*/

@@ -10,7 +10,7 @@ import { fetchData } from '../actions';
 class Landing extends Component {
     constructor(props) {
         super(props);
-        this.state = {units: null};
+        this.state = {units: null,contacts: null};
     }
 
     async loadUnit() {
@@ -18,6 +18,13 @@ class Landing extends Component {
         await axios.get('https://inventory-react.herokuapp.com/api/units')
             .then(function (response) {
                 _this.setState({units: response.data});
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+        await axios.get('https://inventory-react.herokuapp.com/api/contacts')
+            .then(function (response) {
+                _this.setState({contacts: response.data});
             })
             .catch(function (error) {
                 console.log(error);

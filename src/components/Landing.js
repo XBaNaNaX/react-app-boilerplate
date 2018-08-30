@@ -22,6 +22,7 @@ class Landing extends Component {
             .catch(function (error) {
                 console.log(error);
             });
+        console.log("Pass Units");    
         await axios.get('https://inventory-react.herokuapp.com/api/contacts')
             .then(function (response) {
                 _this.setState({contacts: response.data});
@@ -29,6 +30,7 @@ class Landing extends Component {
             .catch(function (error) {
                 console.log(error);
             });
+        console.log("Pass Contact");    
     }
 
     async componentDidMount() {

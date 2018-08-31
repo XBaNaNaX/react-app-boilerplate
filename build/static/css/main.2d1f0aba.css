@@ -1,3 +1,190 @@
+.clr-blue {
+  color: #46a8c1 !important; }
+
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@-moz-keyframes fadein {
+  /* Firefox */
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@-webkit-keyframes fadein {
+  /* Safari and Chrome */
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@-o-keyframes fadein {
+  /* Opera */
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@-webkit-keyframes fadeInLeftToRight {
+  from {
+    opacity: 0;
+    width: 0; }
+  to {
+    opacity: 1;
+    width: 100%; } }
+
+@-moz-keyframes fadeInLeftToRight {
+  from {
+    opacity: 0;
+    width: 0; }
+  to {
+    opacity: 1;
+    width: 100%; } }
+
+@keyframes fadeInLeftToRight {
+  from {
+    opacity: 0;
+    width: 0; }
+  to {
+    opacity: 1;
+    width: 100%; } }
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+.cke_notifications_area {
+  display: none !important; }
+
+.disabled {
+  cursor: not-allowed !important; }
+  .disabled:hover {
+    cursor: not-allowed !important; }
+
+.input-disabled {
+  cursor: not-allowed !important;
+  pointer-events: none;
+  background-color: #ebebeb !important;
+  color: #ccc !important; }
+
+.avoid-click {
+  pointer-events: none; }
+
+.add-gray-scale {
+  filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+  -moz-filter: grayscale(1);
+  -o-filter: grayscale(1);
+  -ms-filter: grayscale(1); }
+
+.add-gray-button-disabled button {
+  background: #999 !important;
+  background-color: #999 !important; }
+
+.add-gray-button-disabled div {
+  background: #999 !important;
+  background-color: #999 !important; }
+
+.avoid-loading {
+  cursor: progress; }
+
+.border-rounded {
+  border-radius: 50%; }
+
+.text-center {
+  text-align: center; }
+
+.text-right {
+  text-align: right; }
+
+.hide {
+  display: none !important; }
+
+.displayFlex {
+  display: flex; }
+
+ul {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  height: 80px;
+  outline: none;
+  -webkit-animation: fadeIn ease-in 0.5s;
+  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation: fadeIn ease-in 0.5s;
+  animation: fadeIn ease-in 0.5s;
+  -webkit-animation-fill-mode: forwards;
+  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 0.5s;
+  -moz-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  background: #66499c;
+  background: -moz-linear-gradient(left, #66499c 0%, #d875ff 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, #66499c), color-stop(100%, #d875ff));
+  background: -webkit-linear-gradient(left, #66499c 0%, #d875ff 100%);
+  background: -o-linear-gradient(left, #66499c 0%, #d875ff 100%);
+  background: -ms-linear-gradient(left, #66499c 0%, #d875ff 100%);
+  background: linear-gradient(to right, #66499c 0%, #d875ff 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66499c', endColorstr='#d875ff', GradientType=1 );
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3) !important; }
+  ul li {
+    list-style: none;
+    border-radius: 4%;
+    -webkit-transition: all 300ms;
+    -o-transition: all 300ms;
+    transition: all 300ms;
+    outline: none; }
+    ul li:hover, ul li:active, ul li:focus, ul li:focus-within {
+      background-color: white; }
+      ul li:hover a, ul li:active a, ul li:focus a, ul li:focus-within a {
+        color: #66499c; }
+    ul li a {
+      text-decoration: none;
+      outline: none;
+      font-weight: bold;
+      color: white;
+      display: block;
+      padding: 6px 12px;
+      min-width: 80px;
+      text-align: center; }
+
+/* ----------- Galaxy S3 ----------- */
+/* Portrait and Landscape */
+/* Portrait */
+/* Landscape */
+/* ----------- Galaxy S4, S5 and Note 3 ----------- */
+/* Portrait and Landscape */
+/* Portrait */
+/* Landscape */
+/* ----------- Galaxy S6 ----------- */
+/* Portrait and Landscape */
+/* Portrait */
+/* Landscape */
 .App {
   text-align: center; }
 
@@ -331,4 +518,4 @@ body {
   padding: 0;
   font-family: sans-serif; }
 
-/*# sourceMappingURL=main.151174e9.css.map*/
+/*# sourceMappingURL=main.2d1f0aba.css.map*/

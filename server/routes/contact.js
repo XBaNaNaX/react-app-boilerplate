@@ -27,8 +27,28 @@ router.route('/contacts')
         if (err)
             res.send(err);
 
+        contact = contact.filter(function(contacts) {
+            return contacts.name !== "";
+        });       
+
         res.json(contact);
     });
+})
+
+router.route('/contacts/search')
+.post(function(req, res) {
+    if (req.body.textSearch !== "") {
+            Contact.find({$text: {$search: req.body.textSearch}}, function(err, contact) {
+            if (err)
+                res.send(err);
+
+            contact = contact.filter(function(contacts) {
+                return contacts.name !== "";
+            });       
+
+            res.json(contact);
+        });
+    }       
 })
 
 module.exports = router ;

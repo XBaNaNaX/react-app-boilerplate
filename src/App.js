@@ -19,6 +19,10 @@ class App extends Component {
                 <div>
                 <Navigation/>
                 <Route
+                    exact path={routes.CONTACT}
+                    component={() => <HomePage />}
+                />
+                <Route
                     exact path={routes.LANDING}
                     component={() => <LandingPage />}
                 />

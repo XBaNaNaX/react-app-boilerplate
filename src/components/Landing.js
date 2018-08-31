@@ -7,6 +7,8 @@ import TextBox from './Controls/TextBox';
 import { connect } from 'react-redux';
 import { fetchData } from '../actions';
 
+require('dotenv').config();
+
 class Landing extends Component {
     constructor(props) {
         super(props);
@@ -15,7 +17,8 @@ class Landing extends Component {
 
     async loadUnit() {
         let _this = this;
-        await axios.get('https://inventory-react.herokuapp.com/api/units')
+        let api_url = process.env.REACT_APP_API_URL;
+        await axios.get(api_url+'/units')
             .then(function (response) {
                 _this.setState({units: response.data});
             })
@@ -23,7 +26,7 @@ class Landing extends Component {
                 console.log(error);
             });
         console.log("Pass Units");    
-        await axios.get('https://inventory-react.herokuapp.com/api/contacts')
+        await axios.get(api_url+'/contacts')
             .then(function (response) {
                 _this.setState({contacts: response.data});
             })

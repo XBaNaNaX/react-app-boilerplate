@@ -1,6 +1,6 @@
 $clr-light-blue: #46a8c1;
 $clr-dark-blue: #47a8bf;
-$clr-info: #007bb6 ;
+$clr-info: #007bb6;
 $clr-dark-blue2: #086378;
 $clr-green: #009900;
 $clr-red: #EE0000;
@@ -13,7 +13,7 @@ $clr-dark-gray2: #666;
 $clr-light-gray: #ebebeb;
 $clr-light-gray2: #fafafa;
 $clr-orange: #f57920;
-$clr-orange2:  #F47920;
+$clr-orange2: #F47920;
 $clr-dark-orange: #dc640d;
 //font weight
 $font-lighter : 300;
@@ -22,51 +22,67 @@ $medium-screen: 1199px !default;
 $medium-and-down: "only screen and (max-width : #{$medium-screen})" !default;
 $small-screen: 767px !default;
 $small-and-down: "only screen and (max-width : #{$small-screen})" !default;
-.clr-blue{
+
+.clr-blue {
     color: $clr-light-blue !important;
 }
+
 @keyframes fadein {
     from {
-        opacity:0;
+        opacity: 0;
     }
+
     to {
-        opacity:1;
+        opacity: 1;
     }
 }
-@-moz-keyframes fadein { /* Firefox */
+
+@-moz-keyframes fadein {
+
+    /* Firefox */
     from {
-        opacity:0;
+        opacity: 0;
     }
+
     to {
-        opacity:1;
+        opacity: 1;
     }
 }
-@-webkit-keyframes fadein { /* Safari and Chrome */
+
+@-webkit-keyframes fadein {
+
+    /* Safari and Chrome */
     from {
-        opacity:0;
+        opacity: 0;
     }
+
     to {
-        opacity:1;
+        opacity: 1;
     }
 }
-@-o-keyframes fadein { /* Opera */
+
+@-o-keyframes fadein {
+
+    /* Opera */
     from {
-        opacity:0;
+        opacity: 0;
     }
+
     to {
         opacity: 1;
     }
 }
 
 @mixin button-shadow() {
-    -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2) !important;
-    -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2) !important;
-    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2) !important;    
+    -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2) !important;
+    -moz-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2) !important;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2) !important;
 }
+
 @mixin button-shadow1() {
-    -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.4) !important;
-    -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.4) !important;
-    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.4) !important;    
+    -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.4) !important;
+    -moz-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.4) !important;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.4) !important;
 }
 
 @mixin tab-menu-styles() {
@@ -78,40 +94,50 @@ $small-and-down: "only screen and (max-width : #{$small-screen})" !default;
         padding-right: 25%;
         text-align: center;
         @include material-box-shadow(1);
+
         .col {
             height: 100%;
             padding: 0 !important;
         }
+
         .user-profile-tab {
             //height: 100%;
             font-weight: $font-bold;
             color: #cccccc;
             height: 50px;
+
             .material-icons {
                 color: #cccccc !important;
             }
+
             &.active {
                 color: #000;
+
                 .user-profile-menu {
                     margin-top: 10px;
                 }
+
                 .material-icons {
                     color: #000 !important;
                 }
             }
         }
+
         .active-tab-menu {
             height: 5px;
             position: relative;
             top: 47px;
             width: 100%;
             background-color: $clr-dark-blue;
-            opacity: 0; /* make things invisible upon start */
-            -webkit-animation: fadeInLeftToRight ease-in 0.2s; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+            opacity: 0;
+            /* make things invisible upon start */
+            -webkit-animation: fadeInLeftToRight ease-in 0.2s;
+            /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
             -moz-animation: fadeInLeftToRight ease-in 0.2s;
             animation: fadeInLeftToRight ease-in 0.2s;
 
-            -webkit-animation-fill-mode: forwards; /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+            -webkit-animation-fill-mode: forwards;
+            /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
             -moz-animation-fill-mode: forwards;
             animation-fill-mode: forwards;
 
@@ -119,6 +145,7 @@ $small-and-down: "only screen and (max-width : #{$small-screen})" !default;
             -moz-animation-duration: 0.15s;
             animation-duration: 0.15s;
         }
+
         .user-profile-menu {
             margin-top: 14px;
         }
@@ -126,21 +153,31 @@ $small-and-down: "only screen and (max-width : #{$small-screen})" !default;
 }
 
 @mixin material-box-shadow($level:1) {
-    @if $level == 1 {
+    @if $level==1 {
         //box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
         -webkit-box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px !important;
         -moz-box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px !important;
         box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px !important;
-    } @else if $level == 2 {
-        box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2)!important;
-    } @else if $level == 3 {
-        box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3)!important;
-    } @else if $level == 4 {
-        box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3)!important;
-    } @else if $level == 5 {
-        box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.3)!important;
-    } @else {
-        box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3)!important;
+    }
+
+    @else if $level==2 {
+        box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2) !important;
+    }
+
+    @else if $level==3 {
+        box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    @else if $level==4 {
+        box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    @else if $level==5 {
+        box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    @else {
+        box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3) !important;
     }
 }
 
@@ -160,28 +197,32 @@ $small-and-down: "only screen and (max-width : #{$small-screen})" !default;
         height: 160px !important;
         text-align: center;
     }
+
     .side-bar-counter {
         width: 100% !important;
         text-align: center !important;
         margin: 0 !important;
-        height:50px !important;
+        height: 50px !important;
     }
+
     .primary-counter {
         padding-top: 18px;
     }
-    .primary-text {
 
-    }
+    .primary-text {}
+
     .home-side-bar-menu {
         .ViewCursorRoot {
             opacity: 0;
             width: 0;
             height: 5px;
-            -webkit-animation: fadeInLeftToRight ease-in 0.5s; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+            -webkit-animation: fadeInLeftToRight ease-in 0.5s;
+            /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
             -moz-animation: fadeInLeftToRight ease-in 0.5s;
             animation: fadeInLeftToRight ease-in 0.5s;
 
-            -webkit-animation-fill-mode: forwards; /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+            -webkit-animation-fill-mode: forwards;
+            /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
             -moz-animation-fill-mode: forwards;
             animation-fill-mode: forwards;
 
@@ -192,9 +233,41 @@ $small-and-down: "only screen and (max-width : #{$small-screen})" !default;
     }
 }
 
-@-webkit-keyframes fadeInLeftToRight { from { opacity:0;width: 0 } to { opacity:1; width: 100%} }
-@-moz-keyframes fadeInLeftToRight { from { opacity:0;width: 0} to { opacity:1; width: 100%} }
-@keyframes fadeInLeftToRight{ from { opacity:0;width: 0} to { opacity:1; width: 100%} }
+@-webkit-keyframes fadeInLeftToRight {
+    from {
+        opacity: 0;
+        width: 0
+    }
+
+    to {
+        opacity: 1;
+        width: 100%
+    }
+}
+
+@-moz-keyframes fadeInLeftToRight {
+    from {
+        opacity: 0;
+        width: 0
+    }
+
+    to {
+        opacity: 1;
+        width: 100%
+    }
+}
+
+@keyframes fadeInLeftToRight {
+    from {
+        opacity: 0;
+        width: 0
+    }
+
+    to {
+        opacity: 1;
+        width: 100%
+    }
+}
 
 //home right panel student offer (Tablet)
 @mixin home-right-panel-student-offer-tablet() {
@@ -202,35 +275,41 @@ $small-and-down: "only screen and (max-width : #{$small-screen})" !default;
         width: 334px !important;
     }
 }
+
 //home right panel student offer (Mobile)
 @mixin home-right-panel-student-offer-mobile() {
-    .student-wait-offer{
+    .student-wait-offer {
         padding-top: 10px;
     }
+
     .student-offer-card {
         width: 100% !important;
         background-color: #ffffff;
         margin-left: 0 !important;
         margin-right: 0 !important;
     }
+
     .student-offer-card-block {
         width: 100% !important;
         padding-top: 0px !important;
         padding-bottom: 0px !important;
     }
 }
+
 @mixin add-fade-in($duration:0.5s) {
-        -webkit-animation: fadeIn ease-in $duration; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
-        -moz-animation: fadeIn ease-in $duration;
-        animation: fadeIn ease-in $duration;
+    -webkit-animation: fadeIn ease-in $duration;
+    /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation: fadeIn ease-in $duration;
+    animation: fadeIn ease-in $duration;
 
-        -webkit-animation-fill-mode: forwards; /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
-        -moz-animation-fill-mode: forwards;
-        animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
 
-        -webkit-animation-duration: $duration;
-        -moz-animation-duration: $duration;
-        animation-duration: $duration;
+    -webkit-animation-duration: $duration;
+    -moz-animation-duration: $duration;
+    animation-duration: $duration;
 }
 
 @mixin add-text-overflow-ellipsis($width:200px) {
@@ -240,7 +319,7 @@ $small-and-down: "only screen and (max-width : #{$small-screen})" !default;
     text-overflow: ellipsis;
 }
 
-@mixin add-testhero-checkbox($tick_color:#F44336,$checked_background_color:#eeeeee,$unchecked_background_color:#fff,$border_checkbox_color:#cccccc) {
+@mixin add-testhero-checkbox($tick_color:#F44336, $checked_background_color:#eeeeee, $unchecked_background_color:#fff, $border_checkbox_color:#cccccc) {
     .testhero-checkbox {
         position: absolute;
         top: 10px !important;
@@ -300,12 +379,39 @@ $small-and-down: "only screen and (max-width : #{$small-screen})" !default;
         border-radius: 2px;
     }
 }
-// animation fade in
-@-webkit-keyframes fadeIn { from { opacity:0 } to { opacity:1} }
-@-moz-keyframes fadeIn { from { opacity:0} to { opacity:1} }
-@keyframes fadeIn{ from { opacity:0} to { opacity:1} }
 
-@mixin background-gradient($color1:#66499c,$color2:#d875ff) {
+// animation fade in
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@-moz-keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@mixin background-gradient($color1:#66499c, $color2:#d875ff) {
     background: $color1;
     background: -moz-linear-gradient(left, $color1 0%, $color2 100%);
     background: -webkit-gradient(left top, right top, color-stop(0%, $color1), color-stop(100%, $color2));
@@ -313,7 +419,7 @@ $small-and-down: "only screen and (max-width : #{$small-screen})" !default;
     background: -o-linear-gradient(left, $color1 0%, $color2 100%);
     background: -ms-linear-gradient(left, $color1 0%, $color2 100%);
     background: linear-gradient(to right, $color1 0%, $color2 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66499c', endColorstr='#d875ff', GradientType=1 );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#66499c', endColorstr='#d875ff', GradientType=1);
 }
 
 @mixin add-blur-filter($blur: 5px) {
@@ -322,6 +428,7 @@ $small-and-down: "only screen and (max-width : #{$small-screen})" !default;
     -o-filter: blur($blur);
     -ms-filter: blur($blur);
     filter: blur($blur);
+
     &:after {
         content: '';
         position: absolute;
@@ -341,6 +448,7 @@ $small-and-down: "only screen and (max-width : #{$small-screen})" !default;
 
 .disabled {
     cursor: not-allowed !important;
+
     &:hover {
         cursor: not-allowed !important;
     }
@@ -364,11 +472,13 @@ $small-and-down: "only screen and (max-width : #{$small-screen})" !default;
     -o-filter: grayscale(1);
     -ms-filter: grayscale(1);
 }
+
 .add-gray-button-disabled {
     button {
         background: #999 !important;
         background-color: #999 !important;
     }
+
     div {
         background: #999 !important;
         background-color: #999 !important;
@@ -397,4 +507,103 @@ $small-and-down: "only screen and (max-width : #{$small-screen})" !default;
 
 .displayFlex {
     display: flex;
+}
+
+.close-btn {
+    display: inline-block;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    color: red;
+    background-color: transparent;
+    border: 0;
+    font-weight: bold;
+    font-size: 1em;
+    border-radius: 3em;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px !important;
+    -moz-box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px !important;
+    box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px !important;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.submit-btn {
+    background-color: #3EA20E;
+    border-radius: 4px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px !important;
+    -moz-box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px !important;
+    box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px !important;
+    color: white;
+    font-size: small;
+    min-width: 100px;
+    max-height: 40px;
+    line-height: 30px;
+    border: transparent;
+    border-bottom: 1px solid #256507;
+    cursor: pointer;
+    background: rgba(103, 230, 39, 1);
+    background: -moz-linear-gradient(top, rgba(103, 230, 39, 1) 0%, rgba(46, 133, 3, 1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(103, 230, 39, 1)), color-stop(100%, rgba(46, 133, 3, 1)));
+    background: -webkit-linear-gradient(top, rgba(103, 230, 39, 1) 0%, rgba(46, 133, 3, 1) 100%);
+    background: -o-linear-gradient(top, rgba(103, 230, 39, 1) 0%, rgba(46, 133, 3, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(103, 230, 39, 1) 0%, rgba(46, 133, 3, 1) 100%);
+    background: linear-gradient(to bottom, rgba(103, 230, 39, 1) 0%, rgba(46, 133, 3, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#67e627', endColorstr='#2e8503', GradientType=0);
+}
+
+.primary-btn {
+    border-radius: 4px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px !important;
+    -moz-box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px !important;
+    box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px !important;
+    color: white;
+    font-size: small;
+    min-width: 100px;
+    max-height: 40px;
+    line-height: 30px;
+    border: transparent;
+    border-bottom: 1px solid #256507;
+    cursor: pointer;
+    background: rgba(79, 117, 240, 1);
+    background: -moz-linear-gradient(top, rgba(79, 117, 240, 1) 0%, rgba(62, 86, 174, 1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(79, 117, 240, 1)), color-stop(100%, rgba(62, 86, 174, 1)));
+    background: -webkit-linear-gradient(top, rgba(79, 117, 240, 1) 0%, rgba(62, 86, 174, 1) 100%);
+    background: -o-linear-gradient(top, rgba(79, 117, 240, 1) 0%, rgba(62, 86, 174, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(79, 117, 240, 1) 0%, rgba(62, 86, 174, 1) 100%);
+    background: linear-gradient(to bottom, rgba(79, 117, 240, 1) 0%, rgba(62, 86, 174, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4f75f0', endColorstr='#3E56AE', GradientType=0);
+}
+
+.secondary-btn {
+    border-radius: 4px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px !important;
+    -moz-box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px !important;
+    box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px !important;
+    color: white;
+    font-size: small;
+    min-width: 100px;
+    max-height: 40px;
+    line-height: 30px;
+    border: transparent;
+    border-bottom: 1px solid #B66614;
+    cursor: pointer;
+    background: rgba(255, 196, 30, 1);
+    background: -moz-linear-gradient(top, rgba(255, 196, 30, 1) 0%, rgba(251, 159, 31, 1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255, 196, 30, 1)), color-stop(100%, rgba(251, 159, 31, 1)));
+    background: -webkit-linear-gradient(top, rgba(255, 196, 30, 1) 0%, rgba(251, 159, 31, 1) 100%);
+    background: -o-linear-gradient(top, rgba(255, 196, 30, 1) 0%, rgba(251, 159, 31, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(255, 196, 30, 1) 0%, rgba(251, 159, 31, 1) 100%);
+    background: linear-gradient(to bottom, rgba(255, 196, 30, 1) 0%, rgba(251, 159, 31, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFC41E', endColorstr='#FB9F1F', GradientType=0);
+}
+
+.d-flex-end {
+    display: flex;
+    justify-content: flex-end;
+}
+
+button {
+    outline: none;
 }

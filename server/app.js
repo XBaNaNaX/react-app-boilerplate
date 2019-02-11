@@ -6,6 +6,8 @@ const favicon = require('serve-favicon');
 //import routes
 var inventory = require('./routes/inventory');
 var contact = require('./routes/contact');
+var roles = require('./routes/roles');
+var groups = require('./routes/groups');
 // Setup logger
 app.use(morgan(':remote-addr - :remote-user [:date[clf]] ":method :url HTTP/:http-version" :status :res[content-length] :response-time ms'));
 
@@ -23,6 +25,8 @@ app.use(function(req, res, next) {
 
 app.use('/api', inventory);
 app.use('/api', contact);
+app.use('/api', roles);
+app.use('/api', groups);
 
 // Serve static assets
 app.use(express.static(path.resolve(__dirname, '../build')));

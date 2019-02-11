@@ -51,4 +51,27 @@ router.route('/contacts/search')
     }       
 })
 
+router.route('/contacts/update/')
+.post(function(req, res) {
+    console.log(req.body.data)
+    if (req.body.data.contact_id !== "") {
+        const _id = req.body.data.contact_id;
+        let data = {
+            name: req.body.data.name,
+            nickname: req.body.data.nickname,
+            office: req.body.data.office,
+            mobile: req.body.data.mobile,
+        }
+        Contact.findByIdAndUpdate(_id, data, {new: true}, function(err, contact) {
+            if (err)
+                res.status(500).send(err);
+
+            res.status(201).json({
+                data: contact,
+                message: "success"
+            });
+        });
+    }       
+})
+
 module.exports = router ;

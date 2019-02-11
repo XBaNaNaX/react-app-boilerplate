@@ -1,0 +1,96 @@
+@import '../styles/base/grid.scss';
+@import '../styles/variable.scss';
+
+.flex-baseline {
+    display: flex;
+    align-items: baseline;
+    margin: auto 4rem;
+}
+
+.label-contact {
+    display: inline-block;
+    width: 100px;
+    padding-left: 1rem;
+}
+.ReactTable {
+    margin: auto 4rem;
+}
+.ReactModal__Content {
+    max-width: 1200px;
+
+    .contact-form {
+        display: block;
+        width: 730px;
+    }
+}
+
+.profile-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color:rgba(235, 235, 235, 0.9);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2000;
+    @include material-box-shadow();
+}
+
+.profile-img {
+    display: inline-flex;
+    width: 72px;
+    height: 72px;
+    margin: 0.5rem;
+    border-radius: 50%;
+    border: 2px solid #6df595;
+}
+
+.profile-name {
+    color: rgba(0,0,0,.54)!important;
+    fill: rgba(0,0,0,.54)!important;
+}
+.profile-name-label {
+    display: block;
+    letter-spacing: 0.05em;
+    line-height: 1.6rem;
+}
+.profile-name-label.display-name {
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+.profile-name-label.status-message {
+    color: rgba(0,0,0,.54)!important;
+    fill: rgba(0,0,0,.54)!important;
+}
+
+@media only screen and (min-width : 1199px){
+    .ReactModal__Content {
+        max-width: 80vw;
+
+        .contact-form {
+            display: block;
+            width: 60vw;
+        }
+    }
+}
+
+@media only screen and (min-width : 1201px) {
+    .ReactModal__Content {
+        max-width: 1170px;
+
+        .contact-form {
+            display: block;
+            width: 730px;
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .ReactModal__Content {
+        width: 100%;
+        .contact-form {
+            display: block;
+            width: 100%;
+        }
+    }
+}

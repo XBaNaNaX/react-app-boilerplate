@@ -4,7 +4,7 @@
 .flex-baseline {
     display: flex;
     align-items: baseline;
-    margin: auto 4rem;
+    margin: auto 20px;
 }
 
 .label-contact {
@@ -13,7 +13,7 @@
     padding-left: 1rem;
 }
 .ReactTable {
-    margin: auto 4rem;
+    margin: auto 20px;
 }
 .ReactModal__Content {
     max-width: 1200px;
@@ -87,10 +87,21 @@
 
 @media only screen and (max-width: 767px) {
     .ReactModal__Content {
-        width: 100%;
+        width: 80%;
+        font-size: small;
         .contact-form {
             display: block;
             width: 100%;
+            .base-line {
+                margin: auto;
+            }
         }
+    }
+    .textbox-wrapper input {
+        padding-left: 8px;
+        font-size: 0.9rem;
+    }
+    .profile-name-label {
+        @include add-text-overflow-ellipsis(250px);
     }
 }

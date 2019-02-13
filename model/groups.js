@@ -1,5 +1,5 @@
 var mongoose     = require('mongoose');
-require('dotenv').config();
+if (process.env.NODE_ENV !== 'production') require('dotenv').config()
 var conn = mongoose.createConnection(process.env.DB_CONNECTION_CVRS);
 
 var Schema       = mongoose.Schema;

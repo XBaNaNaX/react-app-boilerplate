@@ -7,7 +7,7 @@ import DropDownList from './Controls/dropdown';
 import TextBox from './Controls/TextBox';
 
 import '../components/home.scss';
-require('dotenv').config();
+if (process.env.NODE_ENV !== 'production') require('dotenv').config()
 
 const liff = window.liff;
 
@@ -202,7 +202,9 @@ class Home extends Component {
 
         return ( <div className={"row"} style={{margin: '0'}}>
         <div className={"col-lg-12 col-md-12 col-sm-12 profile-wrapper"}>
-            <div className={"profile-img"} style={{backgroundImage: pictureUrl ? `url("`+pictureUrl+`")` :`url("https://via.placeholder.com/150")`}}>
+            <div className={"profile-img"} style={{backgroundImage: pictureUrl ? `url("`+pictureUrl+`")` :`url("https://via.placeholder.com/150")`,
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat'}}>
             </div>
             <div className={"profile-name"}>
                 <label className={"d-block profile-name-label display-name"}>{displayName}</label>
@@ -266,7 +268,7 @@ class Home extends Component {
             
                 {_this.lineNavBar()}
 
-                <h1 style={{margin:'auto 4rem', paddingTop: '100px'}}>Contacts</h1>
+                <h1 style={{margin:'auto 20px', paddingTop: '100px'}}>Contacts</h1>
                 <div className={'flex-baseline'}>
                     <label className={'label-contact'}>Search : </label>
                     <TextBox className="primary" id="contact-search" handleChange={(e)=>{
@@ -339,7 +341,7 @@ class Home extends Component {
 
                                 <div className={'flex-baseline'}>
                                     <label className={'label-contact'}>Name : </label>
-                                    <TextBox className="primary" id="contact-nickname" handleChange={(e)=>{ cName = e.target.value; _this.setState({cName: cName})}} value={cName}/>
+                                    <TextBox className="primary" id="contact-name" handleChange={(e)=>{ cName = e.target.value; _this.setState({cName: cName})}} value={cName}/>
                                 </div>
                                 
                                 <div className={'flex-baseline'}>

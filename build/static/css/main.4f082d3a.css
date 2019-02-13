@@ -1040,7 +1040,7 @@ button {
   display: flex;
   -ms-flex-align: baseline;
   align-items: baseline;
-  margin: auto 4rem; }
+  margin: auto 20px; }
 
 .label-contact {
   display: inline-block;
@@ -1048,7 +1048,7 @@ button {
   padding-left: 1rem; }
 
 .ReactTable {
-  margin: auto 4rem; }
+  margin: auto 20px; }
 
 .ReactModal__Content {
   max-width: 1200px; }
@@ -1114,10 +1114,21 @@ button {
 
 @media only screen and (max-width: 767px) {
   .ReactModal__Content {
-    width: 100%; }
+    width: 80%;
+    font-size: small; }
     .ReactModal__Content .contact-form {
       display: block;
-      width: 100%; } }
+      width: 100%; }
+      .ReactModal__Content .contact-form .base-line {
+        margin: auto; }
+  .textbox-wrapper input {
+    padding-left: 8px;
+    font-size: 0.9rem; }
+  .profile-name-label {
+    width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; } }
 .clr-blue {
   color: #46a8c1 !important; }
 
@@ -1508,4 +1519,4 @@ body {
   padding: 0;
   font-family: sans-serif; }
 
-/*# sourceMappingURL=main.7829091a.css.map*/
+/*# sourceMappingURL=main.4f082d3a.css.map*/
